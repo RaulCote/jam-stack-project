@@ -1,19 +1,27 @@
 ---
 templateKey: 'about-page'
 path: /about
-title: About our values
+title: 
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+IKA is a hand-crafted clothing and accessories brand, made in Spain. Based on simplicity and comfort, its production fully consists of natural materials: wool, silk, linen, cotton. At IKA we want our customers to feel comfortable and unique. We want to deliver clothes that will last much longer than just one season–that is why we believe in simple, timeless aesthetic and highest quality of materials and craftsmanship. 
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+The brand was founded in March 2015. All production takes place locally in Barcelona as part of IKA’s mission is to support high-end fashion manufacturing in Spain.
+  
+  
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+**STORE BARCELONA**  
+  
+Carrer de Bonavista, 9  
+(Passeige de Gracia)  
+Monday - Saturday   
+11h-14h, 17h-20h  
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+**SHOWROOM BARCELONA**  
+  
+(CITA PREVIA // WITH APPOINTMENT)  
+(+34) 600 449 213  
+ikaeditions@gmail.com  
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+[Facebook](http://www.facebook.com/ikaeditions)
+
+[Instagram](http://www.instagram.com/ika_editions)
