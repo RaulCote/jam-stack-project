@@ -24,7 +24,7 @@ const Navbar = class extends React.Component {
   //       })
   //     })
   //   } 
-  // }
+  // }  
 
   render() {
     return (
