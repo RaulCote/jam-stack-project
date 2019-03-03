@@ -1,0 +1,66 @@
+@import 'variables'
+
+.logo-navbar
+  max-width: 60px
+  max-height: 50px
+
+  @media (max-width: 600px)
+    max-width: 50px
+    max-height: 40px
+  
+.logo-navbar-container
+  height: 80px
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-right: 40px
+
+  @media (max-width: 600px)
+    margin-right: 20px
+    height: 60px
+
+.navbar-burger span 
+  background-color: white
+
+.navbar 
+  @extend %flex-center
+  background-color: $black
+  min-height: 3.25rem
+  position: relative
+  z-index: 30
+
+.navbar-container
+  @extend %flex-start
+  width: 80%
+
+  @media (max-width:600px) 
+    width: 95%
+
+.navbar-menu
+  @extend %flex-between
+  width: 100%
+
+.navbar-start
+  width: 40%
+  @extend %flex-between
+  
+  @media (max-width:300px)
+    width: 100%
+
+  @media (max-width:1000px)
+    width: 90%
+  
+a.navbar-item
+  font-size: 17px
+  color: white
+  text-decoration: none
+
+  @media (max-width:600px)
+    font-size: 15px
+
+a.navbar-item:hover
+  text-decoration: underline
+
+a
+  color: white
+

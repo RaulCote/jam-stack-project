@@ -6,7 +6,9 @@ title:
 IKA is a hand-crafted clothing and accessories brand, made in Spain. Based on simplicity and comfort, its production fully consists of natural materials: wool, silk, linen, cotton. At IKA we want our customers to feel comfortable and unique. We want to deliver clothes that will last much longer than just one season–that is why we believe in simple, timeless aesthetic and highest quality of materials and craftsmanship. 
 
 The brand was founded in March 2015. All production takes place locally in Barcelona as part of IKA’s mission is to support high-end fashion manufacturing in Spain.
-  
+    
+<br><br>
+ 
   
 
 **STORE BARCELONA**  
