@@ -23,7 +23,7 @@ const Navbar = class extends React.Component {
   //         $target.classList.toggle('is-active')
   //       })
   //     })
-  //   } 
+  //   }     
   // }  
 
   render() {
