@@ -25,7 +25,7 @@ const Navbar = class extends React.Component {
   //     })
   //   }     
   // }  
-
+  
   render() {
     return (
       <nav
@@ -47,16 +47,28 @@ const Navbar = class extends React.Component {
           </div>
           <div id="navMenu" className="navbar-menu">
             <div className="navbar-start">
-              <Link className="navbar-item" to="/about">
-                About
+              <Link 
+                className='navbar-item'
+                to="/about" 
+                activeStyle={{color: 'cyan', fontWeight: '450' }}>
+                 About
               </Link>
-              <Link className="navbar-item" to="/products">
+              <Link 
+                className='navbar-item' 
+                to="/products" 
+                activeStyle={{color: 'cyan', fontWeight: '450'}}>
                 Editions
               </Link>
-              <Link className="navbar-item" to="/blog">
+              <Link 
+                className='navbar-item' 
+                to="/blog" 
+                activeStyle={{color: 'cyan', fontWeight: '450'}}>
                 Blog
               </Link>
-              <Link className="navbar-item" to="/contact">
+              <Link 
+                className='navbar-item' 
+                to="/contact" 
+                activeStyle={{color: 'cyan', fontWeight: '450'}}>
                 Contact
               </Link>
               {/* <Link className="navbar-item" to="/contact/examples">
