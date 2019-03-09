@@ -1,0 +1,62 @@
+footer.footer
+  background-color: $black
+  @extend %flex-center
+  flex-wrap: wrap
+  width: 100%
+  min-height: $footerheight
+  position: absolute
+  left: 0
+  bottom: 0
+  @media (max-width: 600px)
+    min-height: $footerheightmobile
+
+.footer-margin
+  margin-bottom: $footerheightmobile + 10rem
+  @media (min-width: 600px)
+    margin-bottom: 20rem
+
+.footer-info
+  @extend %flex-center
+
+.footer-logo-container
+  margin-left: 3%
+  @media (max-width: 600px)
+    margin-top: 3rem
+
+.footer-columns
+  @extend %flex-between
+  margin-right: 3%
+  flex-wrap: wrap
+  @media (max-width: 600px)
+    margin-bottom: 2rem
+    margin-left: 0%
+  @media (min-width: 1000px)
+    width: 800px    
+  @media (min-width: 1200px)
+    width: 1000px
+
+.footer-column
+  @media (max-width: 600px)
+    width: 100%
+    display: flex
+    justify-content: center
+    margin: 0 auto
+
+.footer-links
+  list-style: none !important
+  text-align: left
+  @media (max-width: 600px)
+    text-align: center
+    padding-left: 0
+
+.social
+  padding: 2em
+.social a
+    padding: .5em .5em .3em .5em;
+    border-radius: 1em;
+    background-color: white
+    margin: .5em;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    display: inline;
