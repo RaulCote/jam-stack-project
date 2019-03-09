@@ -50,25 +50,25 @@ const Navbar = class extends React.Component {
               <Link 
                 className='navbar-item'
                 to="/about" 
-                activeStyle={{color: 'cyan', fontWeight: '450' }}>
+                activeStyle={{color: '#1dd3d3', fontWeight: '450' }}>
                  About
               </Link>
               <Link 
                 className='navbar-item' 
                 to="/products" 
-                activeStyle={{color: 'cyan', fontWeight: '450'}}>
+                activeStyle={{color: '#1dd3d3', fontWeight: '450'}}>
                 Editions
               </Link>
               <Link 
                 className='navbar-item' 
                 to="/blog" 
-                activeStyle={{color: 'cyan', fontWeight: '450'}}>
+                activeStyle={{color: '#1dd3d3', fontWeight: '450'}}>
                 Blog
               </Link>
               <Link 
                 className='navbar-item' 
                 to="/contact" 
-                activeStyle={{color: 'cyan', fontWeight: '450'}}>
+                activeStyle={{color: '#1dd3d3', fontWeight: '450'}}>
                 Contact
               </Link>
               {/* <Link className="navbar-item" to="/contact/examples">
