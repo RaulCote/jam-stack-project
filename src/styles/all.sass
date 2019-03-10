@@ -53,12 +53,15 @@ body
 
 .full-width-image
     width: 100vw
-    height: 400px
+    height: 700px
     background-size: cover
-    background-position: bottom
+    background-position: center
+    background-color: rgba(211, 210, 210, 0.404)
     display: flex
     justify-content: center
     align-items: center
+    @media (max-width:600)
+      height: 400px
 
 .btn
     display: inline-block;
