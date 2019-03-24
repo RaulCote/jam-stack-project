@@ -55,7 +55,7 @@ const Navbar = class extends React.Component {
               </Link>
               <Link 
                 className='navbar-item' 
-                to="/products" 
+                to="/tags/editions" 
                 activeStyle={{ color: 'white' }}>
                 Editions
               </Link>
