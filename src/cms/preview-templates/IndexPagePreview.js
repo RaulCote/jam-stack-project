@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { IndexPageTemplate } from '../../templates/index-page'
 
 const IndexPagePreview = ({ entry, getAsset }) => {
-  const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs'])
-  const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
+  // const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs'])
+  // const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
 
   return (
     <IndexPageTemplate
@@ -38,7 +38,7 @@ IndexPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
-  getAsset: PropTypes.func,
+  // getAsset: PropTypes.func,
 }
 
 export default IndexPagePreview

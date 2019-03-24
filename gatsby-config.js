@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Ika Editions Web Page',
+    title: 'Ika Editions',
     description:
       'Clothing brand based in sunny Barcelona.',
   },
