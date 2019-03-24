@@ -24,6 +24,7 @@ class BlogRoll extends React.Component {
                 <span> &bull; </span>
                 <span className="subtitle is-size-5 is-block">{post.frontmatter.date}</span>
               </p>
+              <div style={{ backgroundImage: `url(${post.frontmatter.image})`}} />
               <p>
                 {post.excerpt}
                 <br />
