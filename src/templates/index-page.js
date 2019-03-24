@@ -3,18 +3,18 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Features from '../components/Features'
+// import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({
   image,
   title,
-  heading,
+  // heading,
   subheading,
-  mainpitch,
-  description,
-  intro,
-  main,
+  // mainpitch,
+  // description,
+  // intro,
+  // main,
 }) => (
     <div>
         <div
@@ -60,15 +60,15 @@ export const IndexPageTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="content">
-              <div className="content">
+              {/* <div className="content">
                 <div className="tile">
                   <h1 className="title">{mainpitch.title}</h1>
                 </div>
                 <div className="tile">
                   <h3 className="subtitle">{mainpitch.description}</h3>
                 </div>
-              </div>
-              <div className="columns">
+              </div> */}
+              {/* <div className="columns">
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
                     {heading}
@@ -78,21 +78,21 @@ export const IndexPageTemplate = ({
               </div>
               <Features gridItems={intro.blurbs} />
               <div className="columns">
-              <div className="column is-12 has-text-centered">
-                <Link className="btn" to="/products">
-                  See all products
-                </Link>
+                <div className="column is-12 has-text-centered">
+                  <Link className="btn" to="/products">
+                    See all products
+                  </Link>
                 </div>
-              </div>
+              </div> */}
               <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
                     Latest stories
                   </h3>
                   <BlogRoll />
                   <div className="column is-12 has-text-centered">
-                  <Link className="btn" to="/blog">
-                    Read more
-                  </Link>
+                    <Link className="btn" to="/blog">
+                      Read more
+                    </Link>
                   </div>
               </div>
               </div>
@@ -126,9 +126,9 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        // mainpitch={frontmatter.mainpitch}
+        // description={frontmatter.description}
+        // intro={frontmatter.intro}
       />
     </Layout>
   )
@@ -158,26 +158,46 @@ query IndexPageTemplate {
         }
         heading
         subheading
-        mainpitch {
-          title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }
 `
+
+// ORIGINAL QUERY
+// export const pageQuery = graphql`
+// query IndexPageTemplate {
+//   markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+//       frontmatter {
+//         title
+//         image {
+//           childImageSharp {
+//             fluid(maxWidth: 2048, quality: 100) {
+//               ...GatsbyImageSharpFluid
+//             }
+//           }
+//         }
+//         heading
+//         subheading
+//         mainpitch {
+//           title
+//           description
+//         }
+//         description
+//         intro {
+//           blurbs {
+//             image {
+//               childImageSharp {
+//                 fluid(maxWidth: 240, quality: 64) {
+//                   ...GatsbyImageSharpFluid
+//                 }
+//               }
+//             }
+//             text
+//           }
+//           heading
+//           description
+//         }
+//       }
+//     }
+//   }
+// `
