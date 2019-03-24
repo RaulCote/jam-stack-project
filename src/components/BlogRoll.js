@@ -21,10 +21,17 @@ class BlogRoll extends React.Component {
                 <Link className="title has-text-primary is-size-4" to={post.fields.slug}>
                   {post.frontmatter.title}
                 </Link>
-                <span> &bull; </span>
-                <span className="subtitle is-size-5 is-block">{post.frontmatter.date}</span>
+                {/* <span> &bull; </span>
+                <span className="subtitle is-size-5 is-block">{post.frontmatter.date}</span> */}
               </p>
-              <div style={{ backgroundImage: `url(${post.frontmatter.image})`}} />
+              { post.frontmatter.image ?  
+              <div style={{ 
+                backgroundImage: `url(${post.frontmatter.image.childImageSharp.fluid.src})`,
+                width: '80%',
+                height: '400px',
+                backgroundSize: 'cover'}} />
+              : null
+              }
               <p>
                 {post.excerpt}
                 <br />
@@ -66,6 +73,13 @@ export default () => (
             }
             frontmatter {
               title
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 2048, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
               templateKey
               date(formatString: "MMMM DD, YYYY")
             }

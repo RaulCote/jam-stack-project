@@ -7,6 +7,7 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
 export const BlogPostTemplate = ({
+  image,
   content,
   contentComponent,
   description,
@@ -22,6 +23,8 @@ export const BlogPostTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
+          {/* { console.log(image, 'IMAGE estas?')}
+          <div style={{width: '200px', height: '200px', backgroundImage: `url(${image})`}} /> */}
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
