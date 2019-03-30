@@ -17,22 +17,23 @@ class BlogRoll extends React.Component {
               key={post.id}
             >
             <article className="tile is-child box notification">
-              <p>
-                <Link className="title has-text-primary is-size-4" to={post.fields.slug}>
+              <div className={'container-card'}>
+                <Link className={'roll-post-title'} to={post.fields.slug}>
                   {post.frontmatter.title}
                 </Link>
                 {/* <span> &bull; </span>
                 <span className="subtitle is-size-5 is-block">{post.frontmatter.date}</span> */}
-              </p>
+              </div>
               { post.frontmatter.image ?  
-              <div style={{ 
-                backgroundImage: `url(${post.frontmatter.image.childImageSharp.fluid.src})`,
-                width: '80%',
-                height: '400px',
-                backgroundSize: 'cover'}} />
+              <div className={'roll-post-image-container'}>
+                <div className={'roll-post-image'}
+                  style={{ 
+                  backgroundImage: `url(${post.frontmatter.image.childImageSharp.fluid.src})`,
+                  }} />
+              </div>
               : null
               }
-              <p>
+              <p className={'container-text'}>
                 {post.excerpt}
                 <br />
                 <br />

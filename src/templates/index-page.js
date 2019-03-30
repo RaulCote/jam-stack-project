@@ -54,7 +54,7 @@ export const IndexPageTemplate = ({
               </h3>
           </div>
         </div>
-  <section className="section section--gradient">
+  <section className="blabla">
     <div className="container">
       <div className="section">
         <div className="columns">
@@ -85,7 +85,7 @@ export const IndexPageTemplate = ({
                 </div>
               </div> */}
               <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
+                  <h3 className={'section-class'}>
                     Latest stories
                   </h3>
                   <BlogRoll />
