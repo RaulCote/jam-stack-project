@@ -21,10 +21,11 @@ export const IndexPageTemplate = ({
           className="full-width-image-container margin-top-0"
           style={{
             backgroundImage: `url(${
-              !image.childImageSharp
+              !!image.childImageSharp
                 ? image.childImageSharp.fluid.src
                 : image
-            })`
+            })`,
+            backgroundPosition: `10%`,
           }}>
           <div className="landing-main-text">
               <h1
