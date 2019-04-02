@@ -16,39 +16,39 @@ class BlogRoll extends React.Component {
               className="is-parent column is-6"
               key={post.id}
             >
-            <article className="tile is-child box notification">
-              <div className={'container-card'}>
-                <Link className={'roll-post-title'} to={post.fields.slug}>
-                  {post.frontmatter.title}
-                </Link>
-                {/* <span> &bull; </span>
-                <span className="subtitle is-size-5 is-block">{post.frontmatter.date}</span> */}
-              </div>
-              { post.frontmatter.image ?  
-              <div className={'roll-post-image-container'}>
-                <Link 
-                  to={post.fields.slug} 
-                  className={'roll-post-image'} 
-                  style={{ 
-                    backgroundImage: 
-                    `url(${post.frontmatter.image.childImageSharp.fluid.src})`,
-                  }} />
-              
-              </div>
-              : null
-              }
-              <p className={'container-text'}>
-                {post.excerpt}
-                <br />
-                <br />
-                <Link className="button" to={post.fields.slug}>
-                  Keep Reading →
-                </Link>
-              </p>
+              <article className="tile is-child box notification">
+                <div className={'container-card'}>
+                  <Link className={'roll-post-title'} to={post.fields.slug}>
+                    {post.frontmatter.title}
+                  </Link>
+                  {/* <span> &bull; </span>
+                  <span className="subtitle is-size-5 is-block">{post.frontmatter.date}</span> */}
+                </div>
+                { post.frontmatter.image ?  
+                <div className={'roll-post-image-container'}>
+                  <Link 
+                    to={post.fields.slug} 
+                    className={'roll-post-image'} 
+                    style={{ 
+                      backgroundImage: 
+                      `url(${post.frontmatter.image.childImageSharp.fluid.src})`,
+                    }} />
+                
+                </div>
+                : null
+                }
+                <p className={'container-text'}>
+                  {post.excerpt}
+                  <br />
+                  <br />
+                  {/* <Link className="button" to={post.fields.slug}>
+                    Keep Reading →
+                  </Link> */}
+                </p>
               </article>
             </div>
-          )))}
-          </div>
+      )))}
+      </div>
     );
   }
 }

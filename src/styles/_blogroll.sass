@@ -1,5 +1,6 @@
 .roll-post-image
-  width: 80%
+  @extend %margin-container
+  width: 100%
   height: 400px
   background-size: cover
   background-repeat: no-repeat
@@ -8,6 +9,8 @@
   @media (max-width: 800px)
     width: 100%
     border: 0
+    margin-right: 0px
+    margin-left: 0px
 
 .roll-post-image:hover
   opacity: 0.98 
@@ -21,19 +24,17 @@
   font-weight: 600
 
 .container-text
-  margin-left: 100px
-  margin-right: 100px
+  @extend %margin-container
   margin-bottom: 20px
   @media (max-width: 600px)
     margin-left: 15px
     margin-right: 15px
-    text-align: justify
+    text-align: left
 
 .container-card
-  margin-left: 100px
-  margin-right: 100px
+  @extend %margin-container
   margin-bottom: 20px
   @media (max-width: 600px)
-    margin-left: 15px
-    margin-right: 15px
+    margin-left: $margin-left-mobile
+    margin-right: $margin-right-mobile
     margin-bottom: 20px
