@@ -19,7 +19,21 @@ export const ProductPageTemplate = ({
   pricing,
 }) => (
   <section className="section section--gradient">
-    <div className="container">
+            <div className={'snapwidget-container'}>
+              <iframe
+              title="snapwidget-iframe"
+              allowtransparency="true" 
+              className="snapwidget-widget" 
+              frameBorder="0" 
+              scrolling="no" 
+              src="https://snapwidget.com/embed/293837" 
+              style={{
+                border: 'none', 
+                overflow: 'auto', 
+                height: '100%'
+                }}></iframe>
+            </div>
+    {/* <div className="container">
       <div className="section">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -104,7 +118,7 @@ export const ProductPageTemplate = ({
           </div>
         </div>
       </div>
-    </div>
+    </div> */}
   </section>
 )
 
