@@ -67,10 +67,16 @@ const Navbar = class extends React.Component {
               </Link>
               <Link 
                 className='navbar-item' 
+                to="/news" 
+                activeStyle={{ color: 'white' }}>
+                News
+              </Link>
+              {/* <Link 
+                className='navbar-item' 
                 to="/contact" 
                 activeStyle={{ color: 'white' }}>
                 Contact
-              </Link>
+              </Link> */}
               {/* <Link className="navbar-item" to="/contact/examples">
                 Form Examples
               </Link> */}
