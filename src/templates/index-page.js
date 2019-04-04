@@ -18,7 +18,7 @@ export const IndexPageTemplate = ({
 }) => (
     <div>
         <div
-          className="full-width-image-container margin-top-0"
+          className="landing-image margin-top-0"
           style={{
             backgroundImage: `url(${
               !!image.childImageSharp
