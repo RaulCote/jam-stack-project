@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
@@ -6,6 +6,8 @@ import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+
+const IframeLazy = React.lazy(() => import('../components/Iframe.js'))
 
 export const NewsPageTemplate = ({
   image,
@@ -19,20 +21,23 @@ export const NewsPageTemplate = ({
   pricing,
 }) => (
   <section className="section section--gradient">
-            <div className={'snapwidget-container'}>
-              <iframe
-              title="snapwidget-iframe"
-              allowtransparency="true" 
-              className="snapwidget-widget" 
-              frameBorder="0" 
-              scrolling="no" 
-              src="https://snapwidget.com/embed/293837" 
-              style={{
-                border: 'none', 
-                overflow: 'auto', 
-                height: '100%'
-                }}></iframe>
-            </div>
+    <div className={'snapwidget-container'}>
+      {/* <iframe
+      title="snapwidget-iframe"
+      allowtransparency="true" 
+      className="snapwidget-widget" 
+      frameBorder="0" 
+      scrolling="no" 
+      src="https://snapwidget.com/embed/293837" 
+      style={{
+        border: 'none', 
+        overflow: 'auto', 
+        height: '100%'
+        }}></iframe> */}
+      <Suspense fallback={<div>Loading...</div>}> 
+        <IframeLazy />
+      </Suspense>
+    </div>
   </section>
 )
 
