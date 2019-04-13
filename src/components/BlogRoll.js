@@ -21,8 +21,6 @@ class BlogRoll extends React.Component {
                   <Link className={'roll-post-title'} to={post.fields.slug}>
                     {post.frontmatter.title}
                   </Link>
-                  {/* <span> &bull; </span>
-                  <span className="subtitle is-size-5 is-block">{post.frontmatter.date}</span> */}
                 </div>
                 { post.frontmatter.image ?  
                 <div className={'roll-post-image-container'}>
@@ -41,9 +39,6 @@ class BlogRoll extends React.Component {
                   {post.excerpt}
                   <br />
                   <br />
-                  {/* <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link> */}
                 </p>
               </article>
             </div>

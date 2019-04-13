@@ -6,10 +6,8 @@ import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-import Logo from '../img/ika-logo.svg'
+import loading from '../img/loading.gif'
 import IframeComponent from '../components/Iframe.js'
-
-// const IframeLazy = React.lazy(() => import('../components/Iframe.js'))
 
 export const NewsPageTemplate = ({
   image,
@@ -23,15 +21,9 @@ export const NewsPageTemplate = ({
   pricing,
 }) => (
   <section className="section section--gradient">
-    {/* <Suspense fallback={<div style={{
-                          display: 'flex',
-                          justifyContent: 'center',
-                          alignItems: 'flex-start',
-                          paddingTop: '10%'
-                          }}>Loading...
-                        </div>}>  */}
       <div className={'snapwidget-container'}>
-        <div style={{backgroundImage: `url(https://3.bp.blogspot.com/-T_2Mk0VWsPs/WKh_DNP_02I/AAAAAAAABF4/oBTlwNI52u8mdo9Y5deIxBzg7Em4n2pvQCLcB/s400/loading%2Bgif%2B1.gif)`,
+        <div style={{backgroundImage: `url(${loading})`,
+          // backgroundImage: `url(https://3.bp.blogspot.com/-T_2Mk0VWsPs/WKh_DNP_02I/AAAAAAAABF4/oBTlwNI52u8mdo9Y5deIxBzg7Em4n2pvQCLcB/s400/loading%2Bgif%2B1.gif)`,
                     backgroundPosition: 'center top',
                     zIndex: '-1',
                     backgroundSize: '30%',
@@ -41,11 +33,9 @@ export const NewsPageTemplate = ({
                     display: 'flex',
                     justifyContent: 'center'
                     }}>
-          {/* <IframeLazy /> */}
           <IframeComponent />
         </div>
       </div>
-    {/* </Suspense> */}
   </section>
 )
 

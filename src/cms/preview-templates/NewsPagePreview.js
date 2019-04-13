@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import { NewsPageTemplate } from '../../templates/news-page'
-const NewsPageTemplate = React.lazy(() => import('../components/Iframe.js'))
+import { NewsPageTemplate } from '../../templates/news-page'
 
 const NewsPagePreview = ({ entry, getAsset }) => {
   const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs'])
@@ -14,7 +13,6 @@ const NewsPagePreview = ({ entry, getAsset }) => {
   const pricingPlans = entryPricingPlans ? entryPricingPlans.toJS() : []
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
     <NewsPageTemplate
       image={entry.getIn(['data', 'image'])}
       title={entry.getIn(['data', 'title'])}
@@ -45,7 +43,6 @@ const NewsPagePreview = ({ entry, getAsset }) => {
         plans: pricingPlans,
       }}
     />
-    </Suspense>
   )
 }
 
