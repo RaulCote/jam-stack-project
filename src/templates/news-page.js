@@ -22,7 +22,7 @@ export const NewsPageTemplate = ({
 }) => (
   <section className="section section--gradient">
       <div className={'snapwidget-container'}>
-        <div style={{backgroundImage: `url(${loading})`,
+        {/* <div style={{backgroundImage: `url(${loading})`,
           // backgroundImage: `url(https://3.bp.blogspot.com/-T_2Mk0VWsPs/WKh_DNP_02I/AAAAAAAABF4/oBTlwNI52u8mdo9Y5deIxBzg7Em4n2pvQCLcB/s400/loading%2Bgif%2B1.gif)`,
                     backgroundPosition: 'center top',
                     zIndex: '-1',
@@ -32,9 +32,9 @@ export const NewsPageTemplate = ({
                     height: '100%',
                     display: 'flex',
                     justifyContent: 'center'
-                    }}>
+                    }}> */}
           <IframeComponent />
-        </div>
+        {/* </div> */}
       </div>
   </section>
 )
