@@ -21,8 +21,20 @@ export const NewsPageTemplate = ({
   pricing,
 }) => (
   <section className="section section--gradient">
-      <div className={'snapwidget-container'}>
-        {/* <div style={{backgroundImage: `url(${loading})`,
+      <div
+        className={'a-button-container'}>
+        <a 
+          className={'a-button'}
+          href={'http://www.instagram.com/ika_editions'}
+          target={'_blank'}
+          rel={'noopener noreferrer'}>
+          Follow us on Instagram!
+        </a>
+      </div>
+      <div 
+        className={'snapwidget-container'}
+        >
+        <div style={{backgroundImage: `url(${loading})`,
           // backgroundImage: `url(https://3.bp.blogspot.com/-T_2Mk0VWsPs/WKh_DNP_02I/AAAAAAAABF4/oBTlwNI52u8mdo9Y5deIxBzg7Em4n2pvQCLcB/s400/loading%2Bgif%2B1.gif)`,
                     backgroundPosition: 'center top',
                     zIndex: '-1',
@@ -32,9 +44,19 @@ export const NewsPageTemplate = ({
                     height: '100%',
                     display: 'flex',
                     justifyContent: 'center'
-                    }}> */}
+                    }}>
           <IframeComponent />
-        {/* </div> */}
+        </div>
+      </div>
+      <div
+       className={'a-button-container'}>
+        <a 
+          className={'a-button'}
+          href={'http://www.instagram.com/ika_editions'}
+          target={'_blank'}
+          rel={'noopener noreferrer'}>
+          Follow us on Instagram!
+        </a>
       </div>
   </section>
 )
