@@ -5,25 +5,27 @@
 
 
 .a-button
-  color: #1ebeb1ef
+  color: $black
   font-style: italic
   text-decoration: none
   text-align: center
   padding: 10px 25px
-  border: 2px solid transparent
-  outline: none
+  // background-color: #f2f7f7fa
 
 .a-button:hover
-  background-color: #c4fffaef
-  color: #009c8fef
+  background-color: #ebf0f0ef
+  color: $black
 
 .a-button:active
   @media (min-width: 601px)
-    border: 2px solid #009c8fef
-    color: #009c8fef
+    color: $black
     background-color: transparent
   @media (max-width: 600px)
-    background-color: #c4fffaef
-    color: #009c8fef
+    color: $black
+    background-color: #ebf0f0ef
+
+.a-button:focus
+  outline-style: solid
+  outline-color: #d3d3d3ef
 
   
