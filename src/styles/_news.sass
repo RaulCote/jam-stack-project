@@ -18,7 +18,12 @@
   color: #009c8fef
 
 .a-button:active
-  border: 2px solid #009c8fef
-  color: #00534cef
-  background-color: transparent
+  @media (min-width: 601px)
+    border: 2px solid #009c8fef
+    color: #009c8fef
+    background-color: transparent
+  @media (max-width: 600px)
+    background-color: #c4fffaef
+    color: #009c8fef
+
   
