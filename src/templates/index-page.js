@@ -103,6 +103,7 @@ export const IndexPageTemplate = ({
             </div>
           </div>
         </section>
+        <div>Hola</div>
   </div>
 )
 
