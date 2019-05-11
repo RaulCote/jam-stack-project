@@ -7,11 +7,24 @@ class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
     const postLinks = posts.map(post => (
-      <li key={post.node.fields.slug}>
-        <Link to={post.node.fields.slug}>
-          <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
-        </Link>
-      </li>
+      <div key={post.node.fields.slug}>
+        <div className={'container-card'}>
+          <Link className={'roll-post-title'}to={post.node.fields.slug}>
+            {post.node.frontmatter.title}
+          </Link>
+        </div>
+        { post.node.frontmatter.image ?
+        <div className={'roll-post-image-container'}>
+          <Link
+            to={post.node.fields.slug} 
+            className={'roll-post-image'}
+            style={{
+              backgroundImage:
+              `url(${post.node.frontmatter.image.childImageSharp.fluid.src})`,
+            }} />
+        </div>
+        : null }
+      </div>
     ))
     const tag = this.props.pageContext.tag
     const title = this.props.data.site.siteMetadata.title
@@ -22,23 +35,30 @@ class TagRoute extends React.Component {
 
     return (
       <Layout>
-        <section className="section">
-          <Helmet title={`${tag} | ${title}`} />
-          <div className="container content">
-            <div className="columns">
-              <div
-                className="column is-10 is-offset-1"
-                style={{ marginBottom: '6rem' }}
-              >
-                {/* <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3> */}
-                <ul className="taglist">{postLinks}</ul>
-                {/* <p>
-                  <Link to="/tags/">Browse all tags</Link>
-                </p> */}
-              </div>
-            </div>
+        <Helmet title={`${title} | ${tag}`} />
+          <div
+            className="full-width-image-container margin-top-0"
+            style={{
+              backgroundImage: `url('/img/latest-stories.jpg')`,
+            }}>
+            <h1
+              className="has-text-weight-bold is-size-1"
+              style={{
+                boxShadow: '0.5rem 0 0 rgba(17, 17, 17, 1), -0.5rem 0 0 rgba(17, 17, 17, 1)',
+                backgroundColor: 'rgba(17, 17, 17, 1)',
+                color: 'white',
+                padding: '1rem',
+              }}>
+              Editions
+            </h1>
           </div>
-        </section>
+            {/* <h3 className="">{tagHeader}</h3> */}
+            <article style={{
+              marginTop: '20px'
+            }}>{postLinks}</article>
+            {/* <p>
+              <Link to="/tags/">Browse all tags</Link>
+            </p> */}
       </Layout>
     )
   }
@@ -66,6 +86,13 @@ export const tagPageQuery = graphql`
           }
           frontmatter {
             title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }  
           }
         }
       }

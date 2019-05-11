@@ -11,12 +11,11 @@ export default class BlogIndexPage extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-            <div
+              <div
                 className="full-width-image-container margin-top-0"
                 style={{
                   backgroundImage: `url('/img/latest-stories.jpg')`,
-                }}
-              >
+                }}>
                 <h1
                   className="has-text-weight-bold is-size-1"
                   style={{
@@ -24,14 +23,13 @@ export default class BlogIndexPage extends React.Component {
                     backgroundColor: 'rgba(17, 17, 17, 1)',
                     color: 'white',
                     padding: '1rem',
-                  }}
-                >
+                  }}>
                   Latest Stories
                 </h1>
               </div>
             </div>
-              <BlogRoll />
-            </div>
+            <BlogRoll />
+          </div>
         </section>
       </Layout>
     )

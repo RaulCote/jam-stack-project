@@ -30,16 +30,15 @@ class BlogRoll extends React.Component {
                     style={{ 
                       backgroundImage: 
                       `url(${post.frontmatter.image.childImageSharp.fluid.src})`,
-                    }} />
-                
+                    }} />             
                 </div>
                 : null
                 }
-                <p className={'container-text'}>
+                {/* <p className={'container-text'}>
                   {post.excerpt}
                   <br />
                   <br />
-                </p>
+                </p> */}
               </article>
             </div>
       )))}
