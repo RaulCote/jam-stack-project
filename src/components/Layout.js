@@ -1,6 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import favicon16 from '../img/favicon-16x16.png'
+import favicon32 from '../img/favicon-32x32.png'
 
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -37,13 +39,13 @@ const TemplateWrapper = ({ children }) => (
           <link
             rel="icon"
             type="image/png"
-            href="/img/favicon-32x32.png"
+            href={favicon32}
             sizes="32x32"
           />
           <link
             rel="icon"
             type="image/png"
-            href="/img/favicon-16x16.png"
+            href={favicon16}
             sizes="16x16"
           />
 
