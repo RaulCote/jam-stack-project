@@ -1,9 +1,8 @@
 ---
-templateKey: 'news-page'
-path: /news
+templateKey: news-page
 title: Our Coffee
 image: /img/jumbotron.jpg
-heading: Great coffee with a conscience
+heading: Clothing brand from Bcn.
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
@@ -99,3 +98,4 @@ pricing:
       plan: Custom
       price: '??'
 ---
+
