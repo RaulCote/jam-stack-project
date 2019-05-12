@@ -23,7 +23,7 @@ export const ProductPageTemplate = ({
               <iframe
               title="snapwidget-iframe"
               allowtransparency="true" 
-              className="snapwidget-widget" 
+              className="snapwidget-ika" 
               frameBorder="0" 
               scrolling="no" 
               src="https://snapwidget.com/embed/293837" 
