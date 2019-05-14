@@ -32,12 +32,12 @@ const Navbar = class extends React.Component {
                 activeStyle={{ color: 'white' }}>
                 Editions
               </Link>
-              <Link 
+              {/* <Link 
                 className='navbar-item' 
                 to="/blog" 
                 activeStyle={{ color: 'white' }}>
                 Blog
-              </Link>
+              </Link> */}
               <Link 
                 className='navbar-item' 
                 to="/news" 
