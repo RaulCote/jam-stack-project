@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import landingImage from '../img/18.jpg'
 
 import Layout from '../components/Layout'
 
@@ -21,14 +22,16 @@ export const IndexPageTemplate = ({
         <div
           className="landing-image margin-top-0"
           style={{
-            backgroundImage: `url(${
-              !!image.childImageSharp
-                ? image.childImageSharp.fluid.src
-                : image
-            })`,
-            backgroundPosition: `10%`,
+            backgroundImage: `url(${landingImage})`,
+            backgroundPosition: '10%'
+            // backgroundImage: `url(${
+            //   !!image.childImageSharp
+            //     ? image.childImageSharp.fluid.src
+            //     : image
+            // })`,
+            // backgroundPosition: `10%`,
           }}>
-          <div className="landing-main-text">
+          {/* <div className="landing-main-text">
               <h1
                 className="nada"
                 style={{
@@ -52,7 +55,7 @@ export const IndexPageTemplate = ({
               >
               {subheading}
               </h3>
-          </div>
+          </div> */}
         </div>
         <section className="blabla">
           <div className="container">
@@ -123,6 +126,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
+      {console.log(frontmatter, '******* frontmatter *********')}
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
