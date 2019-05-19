@@ -22,14 +22,14 @@ export const IndexPageTemplate = ({
         <div
           className="landing-image margin-top-0"
           style={{
-            backgroundImage: `url(${landingImage})`,
-            backgroundPosition: '10%'
-            // backgroundImage: `url(${
-            //   !!image.childImageSharp
-            //     ? image.childImageSharp.fluid.src
-            //     : image
-            // })`,
-            // backgroundPosition: `10%`,
+            // backgroundImage: `url(${landingImage})`,
+            // backgroundPosition: '10%'
+            backgroundImage: `url(${
+              !!image.childImageSharp
+                ? image.childImageSharp.fluid.src
+                : image
+            })`,
+            backgroundPosition: `10%`,
           }}>
           {/* <div className="landing-main-text">
               <h1
