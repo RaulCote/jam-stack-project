@@ -23,15 +23,15 @@ class BlogRoll extends React.Component {
                   </Link>
                 </div>
                 { post.frontmatter.image ?  
-                <div className={'roll-post-image-container'}>
-                  <Link 
-                    to={post.fields.slug} 
-                    className={'roll-post-image'} 
-                    style={{ 
-                      backgroundImage: 
-                      `url(${post.frontmatter.image.childImageSharp.fluid.src})`,
-                    }} />             
-                </div>
+                  <div className={'roll-post-image-container'}>
+                    <Link 
+                    to={post.fields.slug}>
+                      <img
+                      className={'roll-post-image'} 
+                      src={post.frontmatter.image.childImageSharp.fluid.src} 
+                      />  
+                    </Link>           
+                  </div>
                 : null
                 }
                 {/* <p className={'container-text'}>
