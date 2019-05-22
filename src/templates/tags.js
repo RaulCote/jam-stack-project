@@ -14,15 +14,15 @@ class TagRoute extends React.Component {
           </Link>
         </div>
         { post.node.frontmatter.image ?
-        <div className={'roll-post-image-container'}>
-          <Link
-            to={post.node.fields.slug} 
-            className={'roll-post-image'}
-            style={{
-              backgroundImage:
-              `url(${post.node.frontmatter.image.childImageSharp.fluid.src})`,
-            }} />
-        </div>
+          <div className={'roll-post-image-container'}>
+            <Link
+              to={post.node.fields.slug}>
+              <img
+              className={'roll-post-image'}
+              src={post.node.frontmatter.image.childImageSharp.fluid.src}
+              />
+            </Link> 
+          </div>
         : null }
       </div>
     ))
