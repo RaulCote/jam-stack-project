@@ -22,13 +22,13 @@ export const BlogPostTemplate = ({
       {helmet || ''}
       <div className="container content">
         <div className="columns">
-          <div className="column is-10 is-offset-1">
+          <div className="post-container">
           {/* { console.log(image, 'IMAGE estas?')}
           <div style={{width: '200px', height: '200px', backgroundImage: `url(${image})`}} /> */}
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+            <h1 className={'post-title'}>
               {title}
             </h1>
-            <p>{description}</p>
+            <p className={'post-description'}>{description}</p>
             <PostContent content={content} />
             {/* {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
