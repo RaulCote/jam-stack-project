@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { kebabCase } from 'lodash';
+import Helmet from 'react-helmet';
+import { graphql, Link } from 'gatsby';
+import Layout from '../components/Layout';
+import Content, { HTMLContent } from '../components/Content';
 
 export const BlogPostTemplate = ({
   image,
@@ -20,30 +20,12 @@ export const BlogPostTemplate = ({
   return (
     <section className="section">
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="post-container">
-          {/* { console.log(image, 'IMAGE estas?')}
-          <div style={{width: '200px', height: '200px', backgroundImage: `url(${image})`}} /> */}
-            <h1 className={'post-title'}>
-              {title}
-            </h1>
-            <p className={'post-description'}>{description}</p>
-            <PostContent content={content} />
-            {/* {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null} */}
-          </div>
-        </div>
+      <div className={'post-container'}>
+        <h1 className={'post-title'}>
+          {title}
+        </h1>
+        <p className={'post-description'}>{description}</p>
+        <PostContent content={content} />
       </div>
     </section>
   )
@@ -67,10 +49,11 @@ const BlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet 
+            titleTemplate={'%s | Ika Editions'}>
             <title>{`${post.frontmatter.title}`}</title>
             <meta
-              name="description"
+              name={'description'}
               content={`${post.frontmatter.description}`}
             />
           </Helmet>

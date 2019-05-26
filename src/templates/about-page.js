@@ -5,13 +5,6 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 
-AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  image: PropTypes.object,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
-
 export const AboutPageTemplate = ({ 
   title, 
   image, 
@@ -46,8 +39,11 @@ export const AboutPageTemplate = ({
   )
 }
 
-AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
+AboutPageTemplate.propTypes = {
+  title: PropTypes.string.isRequired,
+  image: PropTypes.object,
+  content: PropTypes.string,
+  contentComponent: PropTypes.func,
 }
 
 const AboutPage = ({ data }) => {
@@ -65,6 +61,10 @@ const AboutPage = ({ data }) => {
       />
     </Layout>
   )
+}
+
+AboutPage.propTypes = {
+  data: PropTypes.object.isRequired,
 }
 
 export default AboutPage
