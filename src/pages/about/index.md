@@ -11,6 +11,8 @@ The brand was founded in March 2015. All production takes place locally in Barce
 
 ![Ika Editions - Shop](/img/shop-about-picture.jpg)
 
+<br><br>
+
 **STORE BARCELONA**  
 
 Carrer de Bonavista, 9\
@@ -18,12 +20,18 @@ Carrer de Bonavista, 9\
 Monday - Saturday\
 11h-14h, 17h-20h  
 
+<br><br>
+
 **SHOWROOM BARCELONA**  
 
 (CITA PREVIA // WITH APPOINTMENT)\
 (+34) 600 449 213\
 ikaeditions@gmail.com  
 
+<br><br>
+
 [Facebook](http://www.facebook.com/ikaeditions)
 
 [Instagram](http://www.instagram.com/ika_editions)
+
+<br><br>
