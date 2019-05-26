@@ -29,10 +29,14 @@ export const AboutPageTemplate = ({ title, image, content, contentComponent }) =
                     backgroundPosition: `10%`,
                     // marginBottom: '60px'
                   }} />
-                <h4 className={'section-class'}>
+                <h4 
+                  className={'section-class'}
+                  style={{
+                    marginBottom: '100px'
+                  }}>
                   {title}
                 </h4>
-                <PageContent className="container-text" content={content} />
+                <PageContent className="about-container" content={content} />
               </div>
               <div className="google-maps-container">
                 <iframe 
