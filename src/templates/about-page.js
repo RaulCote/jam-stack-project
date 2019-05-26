@@ -16,6 +16,22 @@ export const AboutPageTemplate = ({ title, image, content, contentComponent }) =
                 {/* <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                   {title}
                 </h2> */}
+                <div
+                  className="landing-image margin-top-0"
+                  style={{
+                    // backgroundImage: `url(${landingImage})`,
+                    // backgroundPosition: '10%'
+                    backgroundImage: `url(${
+                      !!image.childImageSharp
+                        ? image.childImageSharp.fluid.src
+                        : image
+                    })`,
+                    backgroundPosition: `10%`,
+                    // marginBottom: '60px'
+                  }} />
+                <h4 className={'section-class'}>
+                  {title}
+                </h4>
                 <PageContent className="container-text" content={content} />
               </div>
               <div className="google-maps-container">
