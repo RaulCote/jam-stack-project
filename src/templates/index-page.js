@@ -126,7 +126,6 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      {console.log(frontmatter, '******* frontmatter *********')}
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
