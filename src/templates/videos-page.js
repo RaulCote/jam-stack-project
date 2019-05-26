@@ -39,19 +39,19 @@ export const VideosPageTemplate = ({
                   style={{
                     display: 'flex',
                     justifyContent: 'center',
-                    alignItems: 'center',
-                    marginBottom: '50px'
-                  }}>
+                    alignItems: 'center'
+                  }}
+                  className={'video-iframe-container'}>
                   <iframe 
-                    allowFullscreen
+                    allowFullscreen='true' 
                     style={{
                       border: 'none'
                     }}
+                    height="422" 
+                    // mozallowfullscreen="" 
                     src={video.url} 
-                    webkitallowfullscreen={true}
-                    height="360" 
-                    width="640"
-                    >
+                    // webkitallowfullscreen="" 
+                    width="750">
                   </iframe>
                 </div> 
               </React.Fragment>
@@ -61,23 +61,7 @@ export const VideosPageTemplate = ({
         }
     </section>
   )
-
   
-{/* <div style="padding:56.25% 0 0 0;position:relative;">
-  <iframe 
-  src="https://player.vimeo.com/video/130084792?byline=0&portrait=0" 
-  style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-  frameborder="0" 
-  allow="autoplay; fullscreen" 
-  allowfullscreen></iframe>
-  </div><script src="https://player.vimeo.com/api/player.js"></script> */}
-
-
-
-
-
-
-
   VideosPageTemplate.propTypes = {
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     title: PropTypes.string,
