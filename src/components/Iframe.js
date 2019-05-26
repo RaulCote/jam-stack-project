@@ -3,10 +3,10 @@ import React from 'react';
 class IframeComponent extends React.Component {
   
   componentDidMount() {
-    const script = document.createElement('script')
-    script.type = 'text/javascript'
-    script.async = true
-    script.src = 'https://snapwidget.com/js/snapwidget.js'
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = 'https://snapwidget.com/js/snapwidget.js';
     document.body.appendChild(script);
   }
 
