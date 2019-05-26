@@ -40,8 +40,7 @@ class TagRoute extends React.Component {
             className="landing-image margin-top-0"
             style={{
               backgroundImage: `url('/img/latest-stories.jpg')`,
-            }}>
-          </div>
+            }} />
           <h3 className={'section-class'}>
             Editions
           </h3>
