@@ -9,6 +9,8 @@ The brand was founded in March 2015. All production takes place locally in Barce
 \
 <br><br>
 
+![Ika Editions - Shop](/img/shop-about-picture.jpg)
+
 **STORE BARCELONA**  
 
 Carrer de Bonavista, 9\
