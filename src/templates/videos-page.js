@@ -5,12 +5,20 @@ import Layout from '../components/Layout'
 
 export const videos = [
   {
+    title: 'E13',
+    url: 'https://www.youtube.com/embed/vrdGX_5mdZ4'
+  },
+  {
+    title: 'E10',
+    url: 'https://www.youtube.com/embed/G8_rxc_autk'
+  },
+  {
     title: 'E4',
-    url: 'https://player.vimeo.com/video/130899460?title=0&amp;byline=0&amp;portrait=0'
+    url: 'https://www.youtube.com/embed/PuAlQ3P44TU'
   },
   {
     title: 'E3',
-    url: 'https://player.vimeo.com/video/130084792?title=0&amp;byline=0&amp;portrait=0'
+    url: 'https://www.youtube.com/embed/3uboaOCo1WA'
   }
 ]
 
@@ -48,11 +56,7 @@ export const VideosPageTemplate = ({
                     style={{
                       border: 'none'
                     }}
-                    // mozallowfullscreen="" 
-                    src={video.url} 
-                    // webkitallowfullscreen="" 
-                    // width="750"
-                    >
+                    src={video.url}>
                   </iframe>
                 </div> 
               </React.Fragment>
@@ -62,7 +66,8 @@ export const VideosPageTemplate = ({
         }
     </section>
   )
-  
+
+
   VideosPageTemplate.propTypes = {
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     title: PropTypes.string,
