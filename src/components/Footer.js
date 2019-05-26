@@ -12,11 +12,13 @@ const Footer = class extends React.Component {
       <footer className="footer">
 
         <div className="footer-logo-container">
-          <img
-            src={logo}
-            alt="Ika Editions"
-            style={{ width: '8.5em', height: '7em' }}
-          />
+          <Link className="navbar-item" to="/">
+            <img
+              src={logo}
+              alt="Ika Editions"
+              style={{ width: '8.5em', height: '7em' }}
+            />
+          </Link>
         </div>
 
         <div className="footer-info">
@@ -48,14 +50,14 @@ const Footer = class extends React.Component {
                 <div className="footer-column">
                   <section>
                     <ul className="footer-links">
-                      <li>
+                      {/* <li>
                           <Link className="navbar-item" to="/">
                             Home
                           </Link>
-                      </li>
+                      </li> */}
                       <li>
-                        <Link className="navbar-item" to="/blog">
-                          Latest Stories
+                        <Link className="navbar-item" to="/tags/editions">
+                          Editions
                         </Link>
                       </li>
                       <li>
@@ -66,6 +68,11 @@ const Footer = class extends React.Component {
                       <li>
                         <Link className="navbar-item" to="/news">
                           News
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="navbar-item" to="/videos">
+                          Videos
                         </Link>
                       </li>
                     </ul>
