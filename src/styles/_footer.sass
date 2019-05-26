@@ -20,8 +20,12 @@ footer.footer
 
 .footer-logo-container
   margin-left: 3%
-  @media (max-width: 600px)
+  @media (max-width: 999px)
     margin-top: 3rem
+    width: 100%
+    display: flex
+    justify-content: center
+    margin-left: 3%
 
 .footer-columns
   @extend %flex-between
@@ -36,7 +40,7 @@ footer.footer
     width: 1000px
 
 .footer-column
-  @media (max-width: 600px)
+  @media (max-width: 999px)
     width: 100%
     display: flex
     justify-content: center
@@ -45,18 +49,18 @@ footer.footer
 .footer-links
   list-style: none !important
   text-align: left
-  @media (max-width: 600px)
+  @media (max-width: 850px)
     text-align: center
     padding-left: 0
 
 .social
   padding: 2em
 .social a
-    padding: .5em .5em .3em .5em;
-    border-radius: 1em;
-    background-color: white
-    margin: .5em;
-    width: 1em;
-    height: 1em;
-    vertical-align: middle;
-    display: inline;
+  padding: .5em .5em .3em .5em;
+  border-radius: 1em;
+  background-color: white
+  margin: .5em;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  display: inline;

@@ -44,14 +44,15 @@ export const VideosPageTemplate = ({
                   className={'video-iframe-container'}>
                   <iframe 
                     allowFullscreen='true' 
+                    className={'video-iframe'}
                     style={{
                       border: 'none'
                     }}
-                    height="422" 
                     // mozallowfullscreen="" 
                     src={video.url} 
                     // webkitallowfullscreen="" 
-                    width="750">
+                    // width="750"
+                    >
                   </iframe>
                 </div> 
               </React.Fragment>
