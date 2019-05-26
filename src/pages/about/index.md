@@ -20,15 +20,11 @@ Carrer de Bonavista, 9\
 Monday - Saturday\
 11h-14h, 17h-20h  
 
-<br><br>
-
 **SHOWROOM BARCELONA**  
 
 (CITA PREVIA // WITH APPOINTMENT)\
 (+34) 600 449 213\
 ikaeditions@gmail.com  
-
-<br><br>
 
 [Facebook](http://www.facebook.com/ikaeditions)
 
