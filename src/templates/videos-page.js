@@ -3,6 +3,17 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
+export const videos = [
+  {
+    title: 'E4',
+    url: 'https://player.vimeo.com/video/130899460?title=0&amp;byline=0&amp;portrait=0'
+  },
+  {
+    title: 'E3',
+    url: 'https://player.vimeo.com/video/130084792?title=0&amp;byline=0&amp;portrait=0'
+  }
+]
+
 export const VideosPageTemplate = ({
     image,
     title,
@@ -14,11 +25,59 @@ export const VideosPageTemplate = ({
     fullImage,
     pricing,
   }) => (
-    <section className="section section--gradient">
-       
+    <section 
+      className="section section--gradient"
+      style={{
+        marginTop: '100px'
+      }}>
+        {
+          videos.map(video => {
+            return (
+              <React.Fragment>
+                <h2 className={'video-title'}>{video.title}</h2>
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    marginBottom: '50px'
+                  }}>
+                  <iframe 
+                    allowFullscreen
+                    style={{
+                      border: 'none'
+                    }}
+                    src={video.url} 
+                    webkitallowfullscreen={true}
+                    height="360" 
+                    width="640"
+                    >
+                  </iframe>
+                </div> 
+              </React.Fragment>
+            )
+
+          })
+        }
     </section>
   )
+
   
+{/* <div style="padding:56.25% 0 0 0;position:relative;">
+  <iframe 
+  src="https://player.vimeo.com/video/130084792?byline=0&portrait=0" 
+  style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+  frameborder="0" 
+  allow="autoplay; fullscreen" 
+  allowfullscreen></iframe>
+  </div><script src="https://player.vimeo.com/api/player.js"></script> */}
+
+
+
+
+
+
+
   VideosPageTemplate.propTypes = {
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     title: PropTypes.string,
