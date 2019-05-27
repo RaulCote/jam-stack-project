@@ -34,17 +34,19 @@ export const NewsPageTemplate = ({
       <div 
         className={'snapwidget-container'}
         >
-        <div style={{backgroundImage: `url(${loading})`,
+        <div 
+          style={{backgroundImage: `url(${loading})`,
           // backgroundImage: `url(https://3.bp.blogspot.com/-T_2Mk0VWsPs/WKh_DNP_02I/AAAAAAAABF4/oBTlwNI52u8mdo9Y5deIxBzg7Em4n2pvQCLcB/s400/loading%2Bgif%2B1.gif)`,
-                    backgroundPosition: 'center top',
-                    zIndex: '-1',
-                    backgroundSize: '30%',
-                    backgroundRepeat: 'no-repeat',
-                    width: '100%',
-                    height: '100%',
-                    display: 'flex',
-                    justifyContent: 'center'
-                    }}>
+                    // backgroundPosition: 'center top',
+                    // zIndex: '-1',
+                    // backgroundSize: '30%',
+                    // backgroundRepeat: 'no-repeat',
+                    // width: '100%',
+                    // height: '100%',
+                    // display: 'flex',
+                    // justifyContent: 'center'
+                    }}
+          className={'news-page-spinner'}>
           <IframeComponent />
         </div>
       </div>

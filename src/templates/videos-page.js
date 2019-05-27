@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 export const videos = [
   {
     title: 'E13',
-    url: 'https://www.youtube.com/embed/vrdGX_5mdZ4'
+    url: 'https://www.youtube.com/embed/SGEUrmu38xE'
   },
   {
     title: 'E10',

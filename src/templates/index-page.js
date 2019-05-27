@@ -19,18 +19,15 @@ export const IndexPageTemplate = ({
   // main,
 }) => (
     <div>
-        <div
-          className="landing-image margin-top-0"
-          style={{
-            // backgroundImage: `url(${landingImage})`,
-            // backgroundPosition: '10%'
-            backgroundImage: `url(${
-              !!image.childImageSharp
-                ? image.childImageSharp.fluid.src
-                : image
-            })`,
-            backgroundPosition: `10%`,
-          }}>
+      <div
+        className={'landing-image'}
+        style={{
+          backgroundImage: `url(${
+            !!image.childImageSharp
+              ? image.childImageSharp.fluid.src
+              : image
+          })`
+        }}>
           {/* <div className="landing-main-text">
               <h1
                 className="nada"
