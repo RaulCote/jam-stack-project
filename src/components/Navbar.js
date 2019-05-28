@@ -38,6 +38,12 @@ const Navbar = class extends React.Component {
                 activeStyle={{ color: 'white' }}>
                 Blog
               </Link> */}
+              <Link
+                className='navbar-item'
+                to={'/videos'}
+                activeStyle={{ color: 'white' }}>
+                Videos
+              </Link>
               <Link 
                 className='navbar-item' 
                 to="/news" 

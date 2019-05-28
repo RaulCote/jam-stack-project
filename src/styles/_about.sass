@@ -7,7 +7,7 @@
 .google-maps-iframe
   width: 60% !important
   height: 400px !important
-  @media (max-width: 600px)
+  @media (max-width: $mobile-screen)
     width: 100% !important
     height: 300px !important
 
@@ -16,7 +16,10 @@
   margin-right: 20%
   margin-top: 50px
   margin-bottom: 20px
-  @media (max-width: 600px)
+  @media (max-width: $mobile-screen)
     margin-left: 15px
     margin-right: 15px
     text-align: left
+  @media (min-width: $wide-screen)
+    margin: 0px auto
+    max-width: 1000px

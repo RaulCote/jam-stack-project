@@ -22,7 +22,7 @@ html
 
 body 
   margin: 0 0 $footerheight
-  @media (max-width: 600px)
+  @media (max-width: $mobile-screen)
     margin: 0 0 $footerheightmobile
 
 .snapwidget-container
@@ -34,9 +34,11 @@ body
   opacity: 1
   z-index: 1
   cursor: auto
-  @media (max-width: 600px)
+  @media (max-width: $mobile-screen)
     // height: 9000px
     width: 100%
+  @media (min-width: $wide-screen)
+    width: 1000px
 
 .snapwidget-ika
   width: 100%
@@ -71,7 +73,7 @@ body
   display: flex
   justify-content: center
   align-items: center
-  @media (max-width: 600px)
+  @media (max-width: $mobile-screen)
     height: 600px
 
 .full-width-image
@@ -83,7 +85,7 @@ body
   display: flex
   justify-content: center
   align-items: center
-  @media (max-width:600)
+  @media (max-width: $mobile-screen)
     height: 400px
 
 .btn
@@ -97,7 +99,7 @@ body
   color: $black;
   text-align: center;
   background-color: #f2f7f7fa;
-  @media (max-width: 600px)
+  @media (max-width: $mobile-screen)
     width: 100%
     margin-right: $margin-right-mobile
     padding: 12px 0px 10px;
@@ -107,10 +109,9 @@ body
   color: $black
 
 .btn:active
-  @media (min-width: 601px)
-    color: $black
-    background-color: transparent
-  @media (max-width: 600px)
+  color: $black
+  background-color: transparent
+  @media (max-width: $mobile-screen)
     color: $black
     background-color: #e4ebebef
 

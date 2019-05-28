@@ -3,7 +3,7 @@
 .logo-navbar
   max-width: 60px
   max-height: 50px
-  @media (max-width: 600px)
+  @media (max-width: $mobile-screen)
     max-width: 45px
     max-height: 35px
   
@@ -14,7 +14,7 @@
   align-items: center
   justify-content: center
   margin-right: 40px
-  @media (max-width: 600px)
+  @media (max-width: $mobile-screen)
     margin-right: 15px
     height: 60px
 
@@ -31,15 +31,17 @@
 .navbar-container
   @extend %flex-start
   width: 80%
-  @media (max-width:600px) 
+  @media (max-width: $mobile-screen) 
     width: 95%
 
 .navbar-menu
   @extend %flex-between
   width: 100%
+  @media (min-width: $wide-screen)
+    width: 50%
 
 .navbar-start
-  width: 40%
+  width: 50%
   @extend %flex-between
   @media (max-width:300px)
     width: 100%
@@ -53,7 +55,7 @@ a.navbar-item
   font-weight: 450
   text-decoration: none
   outline: none
-  @media (max-width:600px)
+  @media (max-width:$mobile-screen)
     font-size: 15px
 
 a.navbar-item:hover

@@ -7,13 +7,15 @@ footer.footer
   position: absolute
   left: 0
   bottom: 0
-  @media (max-width: 600px)
+  @media (max-width: $mobile-screen)
     min-height: $footerheightmobile
 
 .footer-margin
   margin-bottom: $footerheightmobile + 10rem
-  @media (min-width: 600px)
+  @media (min-width: $mobile-screen)
     margin-bottom: 20rem
+  @media (min-width: $wide-screen)
+    margin-top: 100px
 
 .footer-info
   @extend %flex-center
@@ -31,7 +33,7 @@ footer.footer
   @extend %flex-between
   margin-right: 3%
   flex-wrap: wrap
-  @media (max-width: 600px)
+  @media (max-width: $mobile-screen)
     margin-bottom: 2rem
     margin-left: 0%
   @media (min-width: 1000px)

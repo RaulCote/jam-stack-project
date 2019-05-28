@@ -6,7 +6,11 @@ $footerheight: 15rem
 $footerheightmobile: 25rem
 $margin-left-mobile: 15px
 $margin-right-mobile: 15px
+$margin-left-screen: 15%
+$margin-right-screen: 15%
 $post-images-width: 1000px
+$mobile-screen: 600px
+$wide-screen: 1500px
 
 %flex-start
   display: flex
@@ -24,11 +28,11 @@ $post-images-width: 1000px
   justify-content: space-between
 
 %margin-container
-  margin-left: 15%
-  margin-right: 15%
+  margin-left: $margin-left-screen
+  margin-right: $margin-right-screen
 
 /* Proportional Width to Margin-Container */
-$prop-width: 70%
+$prop-width: 100% -$margin-left-screen -$margin-right-screen
 
 .flex-center
   display: flex
