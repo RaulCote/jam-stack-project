@@ -34,18 +34,20 @@ const Navbar = class extends React.Component {
 
           <div id="navMenu" className="navbar-menu">
             <div className="navbar-start">
-              <Link to="/" className="logo-navbar-container" title="Logo">
+              <Link to="/" className="logo-navbar-container" title="Logo" onClick={() => this.toggleNavBar()}>
                 <img src={logo} alt="Ika" className="logo-navbar" />
               </Link>
               <Link 
                 className='navbar-item'
                 to="/about" 
+                onClick={() => this.toggleNavBar()}
                 activeStyle={{ color: 'white' }}>
                  About
               </Link>
               <Link 
                 className='navbar-item' 
                 to="/tags/editions" 
+                onClick={() => this.toggleNavBar()}
                 activeStyle={{ color: 'white' }}>
                 Editions
               </Link>
@@ -58,12 +60,14 @@ const Navbar = class extends React.Component {
               <Link
                 className='navbar-item'
                 to={'/videos'}
+                onClick={() => this.toggleNavBar()}
                 activeStyle={{ color: 'white' }}>
                 Videos
               </Link>
               <Link 
                 className='navbar-item' 
                 to="/news" 
+                onClick={() => this.toggleNavBar()}
                 activeStyle={{ color: 'white' }}>
                 News
               </Link>
