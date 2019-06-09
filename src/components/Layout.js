@@ -4,6 +4,8 @@ import { StaticQuery, graphql } from 'gatsby'
 import favicon16 from '../img/favicon-16x16.png'
 import favicon32 from '../img/favicon-32x32.png'
 import ikaLogo from '../img/ika-logo.svg'
+import ikaSafariPinnedTab from '../img/safari-pinned-tab.png'
+import ikaAppleTouchIcon from '../img/apple-touch-icon.png'
 
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -35,7 +37,7 @@ const TemplateWrapper = ({ children }) => (
           <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/img/apple-touch-icon.png"
+            href={ikaAppleTouchIcon}
           />
           <link
             rel="icon"
@@ -52,7 +54,7 @@ const TemplateWrapper = ({ children }) => (
 
           <link
             rel="mask-icon"
-            href="/img/safari-pinned-tab.png"
+            href={ikaSafariPinnedTab}
             color="#ff4400"
           />
           <meta name="theme-color" content="#fff" />
