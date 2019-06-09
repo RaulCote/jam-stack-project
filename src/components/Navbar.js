@@ -18,6 +18,14 @@ const Navbar = class extends React.Component {
     }
   }
 
+  closeNavBar = () => {
+    const navMenu = document.getElementById('navMenu');
+    const body = document.querySelector('body');
+    
+    navMenu.className = 'navbar-menu';
+    body.setAttribute('style', 'overflow-y: scroll')
+  }
+
   render() {
     return (
       <nav
@@ -34,7 +42,7 @@ const Navbar = class extends React.Component {
 
           <div id="navMenu" className="navbar-menu">
             <div className="navbar-start">
-              <Link to="/" className="logo-navbar-container" title="Logo" onClick={() => this.toggleNavBar()}>
+              <Link to="/" className="logo-navbar-container" title="Logo" onClick={() => this.closeNavBar()}>
                 <img src={logo} alt="Ika" className="logo-navbar" />
               </Link>
               <Link 

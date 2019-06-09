@@ -21,26 +21,40 @@
 // .navbar-burger span 
 //   background-color: white
 
-// .navbar 
-//   @extend %flex-center
-//   background-color: $black
-//   min-height: 3.25rem
-//   position: relative
-//   z-index: 30
+.navbar 
+  @media (min-width: $mobile-screen + 1px)
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    background-color: $black
+    min-height: 3.25rem
+    position: relative
+    z-index: 30
 
-// .navbar-container
-//   @extend %flex-start
-//   width: 80%
+.navbar-container
+  @media (min-width: $mobile-screen + 1px)
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    width: 80%
 //   @media (max-width: $mobile-screen) 
 //     width: 95%
 
-// .navbar-menu
-//   @extend %flex-between
-//   width: 100%
-//   @media (min-width: $wide-screen)
-//     width: 50%
+.navbar-menu
+  @media (min-width: $mobile-screen + 1px)
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+  @media (min-width: $wide-screen)
+    width: 50%
 
-// .navbar-start
+.navbar-start
+  @media (min-width: $mobile-screen + 1px)
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 50%
 //   width: 50%
 //   @extend %flex-between
 //   @media (max-width:300px)
@@ -58,12 +72,12 @@ a.navbar-item
   @media (max-width:$mobile-screen)
     font-size: 15px
 
-// a.navbar-item:hover
-//   color: $hovergray
-//   transition-duration: 0.5s
+a.navbar-item:hover
+  color: $hovergray
+  transition-duration: 0.5s
 
-// a.navbar-item:active
-//   color: white
+a.navbar-item:active
+  color: white
 
 // Navbar Menu
 .navbar-menu 
@@ -90,15 +104,15 @@ a.navbar-item
   display: none
 
 
-@media screen and (max-width: 600px) 
+@media screen and (max-width: $mobile-screen) 
   .navbar-menu a:not(:first-child) 
     display: none
   .navbar-menu a.icon 
     float: right
     display: block
-    padding: 18px 16px
+    padding: 21px 16px
 
-@media screen and (max-width: 600px) 
+@media screen and (max-width: $mobile-screen) 
   .navbar-menu.responsive 
     position: relative
     width: 100%
