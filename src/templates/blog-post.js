@@ -41,6 +41,7 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
+  const rootUrl = 'https://ecstatic-ardinghelli-3de42f.netlify.com'
 
   return (
     <Layout>
@@ -57,10 +58,7 @@ const BlogPost = ({ data }) => {
               name={'description'}
               content={`${post.frontmatter.description}`}
             />
-            <meta
-              name={'image'}
-              content={`${post.frontmatter.image.childImageSharp.fluid.src}`}
-            />
+            <meta property="og:image" content={post.frontmatter.image.childImageSharp.fluid.src} />
             <meta property="og:type" content="article"/>
           </Helmet>
         }

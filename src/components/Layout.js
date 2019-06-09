@@ -63,7 +63,7 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:image" content={ikaLogo} />
         </Helmet>
         <Navbar />
-        <div className='footer-margin'>{children}</div>
+          <div className='footer-margin'>{children}</div>
         <Footer />
       </div>
     )}
