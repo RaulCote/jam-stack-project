@@ -7,46 +7,46 @@
     max-width: 45px
     max-height: 35px
   
-.logo-navbar-container
-  height: 80px
-  outline: none
-  display: flex
-  align-items: center
-  justify-content: center
-  margin-right: 40px
-  @media (max-width: $mobile-screen)
-    margin-right: 15px
-    height: 60px
+// .logo-navbar-container
+//   height: 80px
+//   outline: none
+//   display: flex
+//   align-items: center
+//   justify-content: center
+//   margin-right: 40px
+//   @media (max-width: $mobile-screen)
+//     margin-right: 15px
+//     height: 60px
 
-.navbar-burger span 
-  background-color: white
+// .navbar-burger span 
+//   background-color: white
 
-.navbar 
-  @extend %flex-center
-  background-color: $black
-  min-height: 3.25rem
-  position: relative
-  z-index: 30
+// .navbar 
+//   @extend %flex-center
+//   background-color: $black
+//   min-height: 3.25rem
+//   position: relative
+//   z-index: 30
 
-.navbar-container
-  @extend %flex-start
-  width: 80%
-  @media (max-width: $mobile-screen) 
-    width: 95%
+// .navbar-container
+//   @extend %flex-start
+//   width: 80%
+//   @media (max-width: $mobile-screen) 
+//     width: 95%
 
-.navbar-menu
-  @extend %flex-between
-  width: 100%
-  @media (min-width: $wide-screen)
-    width: 50%
+// .navbar-menu
+//   @extend %flex-between
+//   width: 100%
+//   @media (min-width: $wide-screen)
+//     width: 50%
 
-.navbar-start
-  width: 50%
-  @extend %flex-between
-  @media (max-width:300px)
-    width: 100%
-  @media (max-width:1000px)
-    width: 90%
+// .navbar-start
+//   width: 50%
+//   @extend %flex-between
+//   @media (max-width:300px)
+//     width: 100%
+//   @media (max-width:1000px)
+//     width: 90%
   
 a.navbar-item
   font-size: 17px
@@ -58,10 +58,88 @@ a.navbar-item
   @media (max-width:$mobile-screen)
     font-size: 15px
 
-a.navbar-item:hover
+// a.navbar-item:hover
+//   color: $hovergray
+//   transition-duration: 0.5s
+
+// a.navbar-item:active
+//   color: white
+
+// Navbar Menu
+.navbar-menu 
+  overflow: hidden
+  background-color: $black
+
+.navbar-menu a 
+  float: left
+  display: block
+  color: #f2f2f2
+  text-align: center
+  padding: 14px 16px
+  text-decoration: none
+  font-size: 17px
+
+.navbar-menu a:hover 
   color: $hovergray
   transition-duration: 0.5s
 
-a.navbar-item:active
+.navbar-menu a.active 
   color: white
 
+.navbar-menu .icon 
+  display: none
+
+
+@media screen and (max-width: 600px) 
+  .navbar-menu a:not(:first-child) 
+    display: none
+  .navbar-menu a.icon 
+    float: right
+    display: block
+    padding: 18px 16px
+
+@media screen and (max-width: 600px) 
+  .navbar-menu.responsive 
+    position: relative
+    width: 100%
+    height: 100vh
+  .navbar-menu.responsive .icon 
+    position: absolute
+    right: 0
+    top: 0
+  .navbar-menu.responsive .burguer-bar
+    transform: rotate(45deg) translateZ(0)
+    top: 60%
+    position: absolute
+    &:last-child
+      transform: rotate(-45deg) translateZ(0)
+      position: absolute
+      top: 60%
+    
+  .navbar-menu.responsive a 
+    float: none
+    display: block
+    text-align: left
+      
+
+.burguer-bar
+  width: 22px
+  margin: 6px -20px
+  height: 2px
+  background-color: $white
+  transition: transform 1s cubic-bezier(.23,1,.32,1),color 1s cubic-bezier(.23,1,.32,1)
+  top: 50%
+  left: 50%
+  -webkit-transition: -webkit-transform 1s cubic-bezier(.23,1,.32,1),color 1s cubic-bezier(.23,1,.32,1)
+  -webkit-transform: translateY(-3.75px) translateZ(0)
+  transform: translateY(-3.75px) translateZ(0)
+  &:last-child
+    -webkit-transform: translateY(3.75px) translateZ(0)
+    transform: translateY(3.75px) translateZ(0)
+                    
+
+.burguer
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  
