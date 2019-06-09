@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import favicon16 from '../img/favicon-16x16.png'
 import favicon32 from '../img/favicon-32x32.png'
+import ikaLogo from '../img/ika-logo.svg'
 
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -59,7 +60,7 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:type" content="business.business" />
           <meta property="og:title" content={data.site.siteMetadata.title} />
           <meta property="og:url" content="/" />
-          <meta property="og:image" content="/img/og-image.jpg" />
+          <meta property="og:image" content={ikaLogo} />
         </Helmet>
         <Navbar />
         <div className='footer-margin'>{children}</div>

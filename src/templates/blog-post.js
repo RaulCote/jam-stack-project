@@ -44,6 +44,7 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
+      { console.log('blogPost :: ', post.frontmatter.image.childImageSharp.fluid.src)}
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
@@ -56,6 +57,11 @@ const BlogPost = ({ data }) => {
               name={'description'}
               content={`${post.frontmatter.description}`}
             />
+            <meta
+              name={'image'}
+              content={`${post.frontmatter.image.childImageSharp.fluid.src}`}
+            />
+            <meta property="og:type" content="article"/>
           </Helmet>
         }
         tags={post.frontmatter.tags}
@@ -83,6 +89,13 @@ export const pageQuery = graphql`
         title
         description
         tags
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

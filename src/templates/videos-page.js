@@ -39,9 +39,9 @@ export const VideosPageTemplate = ({
         marginTop: '100px'
       }}>
         {
-          videos.map(video => {
+          videos.map((video, key) => {
             return (
-              <React.Fragment>
+              <React.Fragment key={key}>
                 <h2 className={'video-title'}>{video.title}</h2>
                 <div
                   style={{
@@ -51,7 +51,7 @@ export const VideosPageTemplate = ({
                   }}
                   className={'video-iframe-container'}>
                   <iframe 
-                    allowFullscreen='true' 
+                    allowFullScreen={true} 
                     className={'video-iframe'}
                     style={{
                       border: 'none'
@@ -61,7 +61,6 @@ export const VideosPageTemplate = ({
                 </div> 
               </React.Fragment>
             )
-
           })
         }
     </section>
