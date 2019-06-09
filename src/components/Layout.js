@@ -6,6 +6,7 @@ import favicon32 from '../img/favicon-32x32.png'
 import ikaLogo from '../img/ika-logo.svg'
 import ikaSafariPinnedTab from '../img/safari-pinned-tab.png'
 import ikaAppleTouchIcon from '../img/apple-touch-icon.png'
+import ikaImageOg from '../img/ika-image-og.png'
 
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -62,7 +63,7 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:type" content="business.business" />
           <meta property="og:title" content={data.site.siteMetadata.title} />
           <meta property="og:url" content="/" />
-          <meta property="og:image" content={ikaLogo} />
+          <meta property="og:image" content={ikaImageOg} />
         </Helmet>
         <Navbar />
           <div className='footer-margin'>{children}</div>
