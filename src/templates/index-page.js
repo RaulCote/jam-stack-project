@@ -91,7 +91,7 @@ export const IndexPageTemplate = ({
                         <div className={'lastest-stories-container'}>
                           <BlogRoll />
                           <div className={'container-text container-button'}>
-                            <Link className="btn" to="/blog">
+                            <Link className="btn" to="/tags/editions">
                               View More
                             </Link>
                           </div>
