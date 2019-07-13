@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { kebabCase } from 'lodash';
+// import { kebabCase } from 'lodash';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
@@ -41,11 +41,10 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
-  const rootUrl = 'https://ecstatic-ardinghelli-3de42f.netlify.com'
+  // const rootUrl = 'https://ecstatic-ardinghelli-3de42f.netlify.com'
 
   return (
     <Layout>
-      { console.log('blogPost :: ', post.frontmatter.image.childImageSharp.fluid.src)}
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
@@ -58,8 +57,8 @@ const BlogPost = ({ data }) => {
               name={'description'}
               content={`${post.frontmatter.description}`}
             />
-            <meta property="og:image" content={post.frontmatter.image.childImageSharp.fluid.src} />
-            <meta property="og:type" content="article"/>
+            <meta property={'og:image'} content={post.frontmatter.image.childImageSharp.fluid.src} />
+            <meta property={'og:type'} content={'article'} />
           </Helmet>
         }
         tags={post.frontmatter.tags}

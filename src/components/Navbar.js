@@ -13,12 +13,10 @@ const Navbar = class extends React.Component {
 
     if (navMenu.className === 'navbar-menu') {
       navMenu.className += ' responsive';
-      // body.setAttribute('style', 'overflow-y: hidden') 
       body.style = 'overflow-y: hidden';
       logoLink.style = 'width: 50%';
     } else {
       navMenu.className = 'navbar-menu';
-      // body.setAttribute('style', 'overflow-y: scroll')
       body.style = 'overflow-y: scroll';
       logoLink.style = '';
     }
@@ -30,7 +28,6 @@ const Navbar = class extends React.Component {
     const logoLink = document.getElementById('logoLink');
 
     navMenu.className = 'navbar-menu';
-    // body.setAttribute('style', 'overflow-y: scroll');
     body.style = 'overflow-y: scroll';
     logoLink.style = '';
   };
@@ -43,11 +40,6 @@ const Navbar = class extends React.Component {
         aria-label={'main-navigation'}>
 
         <div className={'navbar-container'}>
-          {/* <div className="navbar-brand">
-            <Link to="/" className="logo-navbar-container" title="Logo">
-              <img src={logo} alt="Ika" className="logo-navbar" />
-            </Link>
-          </div> */}
 
           <div id={'navMenu'} className={'navbar-menu'}>
             <div className={'navbar-start'}>
@@ -88,7 +80,6 @@ const Navbar = class extends React.Component {
                 News
               </Link>
               <a 
-                // href={'javascript:void(0);'}
                 href={'true'}
                 className={'icon navbar-item burguer'}
                 onClick={(e) => this.toggleNavBar(e)}>

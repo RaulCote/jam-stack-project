@@ -13,12 +13,12 @@ class IframeComponent extends React.Component {
   render() {
     return (
       <iframe
-        title="snapwidget-iframe"
-        allowtransparency="true" 
-        className="snapwidget-ika snapwidget-widget" 
-        frameBorder="0" 
-        scrolling="no" 
-        src="https://snapwidget.com/embed/293837" 
+        title={'snapwidget-iframe'}
+        allowtransparency={'true'} 
+        className={'snapwidget-ika snapwidget-widget'} 
+        frameBorder={'0'} 
+        scrolling={'no'} 
+        src={'https://snapwidget.com/embed/293837'} 
         style={{
           border: 'none', 
           overflow: 'auto', 
