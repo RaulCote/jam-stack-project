@@ -27,6 +27,11 @@ class TagRoute extends React.Component {
         : null }
       </div>
     ))
+
+    const imageLinks = posts.map(post => (
+      <meta property={'og:image'} content={post.frontmatter.image.childImageSharp.fluid.src} />
+    ))
+
     const tag = this.props.pageContext.tag
     const title = this.props.data.site.siteMetadata.title
     // const totalCount = this.props.data.allMarkdownRemark.totalCount
@@ -36,7 +41,11 @@ class TagRoute extends React.Component {
 
     return (
       <Layout>
-        <Helmet title={`${title} | ${tag}`} />
+        <Helmet 
+          title={`${title} | ${tag}`}
+           />
+          <meta property={'og:type'} content={'article'} />
+          {imageLinks}
           <div
             className="landing-image margin-top-0"
             style={{
