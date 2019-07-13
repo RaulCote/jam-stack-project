@@ -55,6 +55,7 @@ export const VideosPageTemplate = ({
                 }}
                 className={'video-iframe-container'}>
                 <iframe 
+                  title={'videos-iframe'}
                   allowFullScreen={true} 
                   className={'video-iframe'}
                   style={{

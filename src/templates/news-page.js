@@ -5,9 +5,9 @@ import IframeComponent from '../components/Iframe.js'
 // import PropTypes from 'prop-types'
 // import { graphql } from 'gatsby'
 
-export const NewsPageTemplate = ({
-  
-}) => (
+export const NewsPageTemplate = (
+  //{}
+) => (
   <section className="section section--gradient">
 
       <div
@@ -46,7 +46,7 @@ NewsPageTemplate.propTypes = {
 
 }
 
-const NewsPage = ({ /* data */ }) => {
+const NewsPage = ( /* { data } */ ) => {
  // const { frontmatter } = data.markdownRemark
 
   return (
