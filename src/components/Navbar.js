@@ -4,16 +4,20 @@ import logo from '../img/ika-logo.png'
 
 const Navbar = class extends React.Component {
   
-  toggleNavBar = () => {
+  toggleNavBar = (e) => {
+    e.preventDefault()
+
     const navMenu = document.getElementById('navMenu');
     const body = document.querySelector('body');
 
     if (navMenu.className === 'navbar-menu') {
       navMenu.className += ' responsive';
-      body.setAttribute('style', 'overflow-y: hidden') 
+      // body.setAttribute('style', 'overflow-y: hidden') 
+      body.style = 'overflow-y: hidden'
     } else {
       navMenu.className = 'navbar-menu';
-      body.setAttribute('style', 'overflow-y: scroll')
+      // body.setAttribute('style', 'overflow-y: scroll')
+      body.style = 'overflow-y: scroll'
     }
   };
 
@@ -22,7 +26,8 @@ const Navbar = class extends React.Component {
     const body = document.querySelector('body');
 
     navMenu.className = 'navbar-menu';
-    body.setAttribute('style', 'overflow-y: scroll');
+    // body.setAttribute('style', 'overflow-y: scroll');
+    body.style = 'overflow-y: scroll'
   };
 
   render() {
@@ -77,9 +82,10 @@ const Navbar = class extends React.Component {
                 News
               </Link>
               <a 
-                href={'javascript:void(0);'}
+                // href={'javascript:void(0);'}
+                href={'true'}
                 className={'icon navbar-item burguer'}
-                onClick={() => this.toggleNavBar()}>
+                onClick={(e) => this.toggleNavBar(e)}>
                 <div className={'burguer-bar'} />
                 <div className={'burguer-bar'} />
               </a>
