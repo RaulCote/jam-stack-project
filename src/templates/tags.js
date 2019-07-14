@@ -116,5 +116,16 @@ export const tagPageQuery = graphql`
         }
       }
     }
+    editionsQuery: markdownRemark(frontmatter: {templateKey: {eq: "editions-page"}}) {
+      frontmatter {
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
   }
 `
