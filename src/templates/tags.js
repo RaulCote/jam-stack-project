@@ -29,7 +29,10 @@ class TagRoute extends React.Component {
     ))
 
     const imageLinks = posts.map(post => (
-      <meta property={'og:image'} content={post.frontmatter.image.childImageSharp.fluid.src} />
+      <meta 
+        property={'og:image'} 
+        content={post.node.frontmatter.image.childImageSharp.fluid.src}
+        key={post.node.fields.slug} />
     ))
 
     const tag = this.props.pageContext.tag

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import landingImage from '../img/18.jpg'
+// import landingImage from '../img/18.jpg'
 
 import Layout from '../components/Layout'
 
