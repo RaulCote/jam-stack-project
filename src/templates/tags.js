@@ -45,10 +45,10 @@ class TagRoute extends React.Component {
     return (
       <Layout>
         <Helmet 
-          title={`${title} | ${tag}`}
-           />
+          title={`${title} | ${tag}`}>
           <meta property={'og:type'} content={'article'} />
           {imageLinks}
+        </Helmet>
           <div
             className="landing-image margin-top-0"
             style={{
