@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
 class BlogRoll extends React.Component {
 
@@ -26,11 +27,16 @@ class BlogRoll extends React.Component {
                   <div className={'roll-post-image-container'}>
                     <Link 
                     to={post.fields.slug}>
-                      <img
+                      <Img
+                        className={'roll-post-image'} 
+                        fluid={post.frontmatter.image.childImageSharp.fluid}
+                        alt={`${post.frontmatter.title} cover`}
+                         />
+                      {/* <img
                       className={'roll-post-image'} 
                       alt={`${post.frontmatter.title} cover`}
                       src={post.frontmatter.image.childImageSharp.fluid.src} 
-                      />  
+                      />   */}
                     </Link>
                   </div>
                 : null

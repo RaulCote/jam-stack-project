@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Img from 'gatsby-image'
 
 class TagRoute extends React.Component {
   render() {
@@ -17,11 +18,15 @@ class TagRoute extends React.Component {
           <div className={'roll-post-image-container'}>
             <Link
               to={post.node.fields.slug}>
-              <img
+              {/* <img
               className={'roll-post-image'}
               alt={`${post.node.frontmatter.title} cover`}
               src={post.node.frontmatter.image.childImageSharp.fluid.src}
-              />
+              /> */}
+              <Img 
+                className={'roll-post-image'}
+                fluid={post.node.frontmatter.image.childImageSharp.fluid}
+                alt={`${post.node.frontmatter.title} cover`} />
             </Link> 
           </div>
         : null }
