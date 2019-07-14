@@ -1,5 +1,5 @@
 ---
-templateKey: editions-page
+templateKey: tags
 title: Our Coffee
 image: /img/jumbotron.jpg
 heading: Clothing brand from Bcn.

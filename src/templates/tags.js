@@ -116,7 +116,7 @@ export const tagPageQuery = graphql`
         }
       }
     }
-    editionsQuery: markdownRemark(frontmatter: {templateKey: {eq: "editions-page"}}) {
+    editionsQuery: markdownRemark(frontmatter: {templateKey: {eq: "tags"}}) {
       frontmatter {
         image {
           childImageSharp {

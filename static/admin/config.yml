@@ -58,7 +58,7 @@ collections:
         label: "Tags Page"
         name: "Editions Page"
         fields: 
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "editions-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tags"}
           - {label: Image, name: image, widget: image}
       # - file: "src/pages/products/index.md"
       #   label: "Products Page"
