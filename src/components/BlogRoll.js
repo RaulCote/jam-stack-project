@@ -26,9 +26,10 @@ class BlogRoll extends React.Component {
                 { post.frontmatter.image ?  
                   <div className={'roll-post-image-container'}>
                     <Link 
-                    to={post.fields.slug}>
+                    to={post.fields.slug}
+                    className={'roll-post-image'} >
                       <Img
-                        className={'roll-post-image'} 
+                        // className={'roll-post-image'} 
                         fluid={post.frontmatter.image.childImageSharp.fluid}
                         alt={`${post.frontmatter.title} cover`}
                          />
