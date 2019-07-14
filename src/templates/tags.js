@@ -6,7 +6,6 @@ import Img from 'gatsby-image'
 
 class TagRoute extends React.Component {
   render() {
-    console.log('TagRoute ::: edges ::: ', this.props.data.allMarkdownRemark.edges)
     const posts = this.props.data.allMarkdownRemark.edges
     const postLinks = posts.map(post => (
       <div key={post.node.fields.slug}>
@@ -44,6 +43,7 @@ class TagRoute extends React.Component {
 
     const tag = this.props.pageContext.tag
     const title = this.props.data.site.siteMetadata.title
+    const landingImage = this.props.data.editionsQuery.frontmatter.image
     // const totalCount = this.props.data.allMarkdownRemark.totalCount
     // const tagHeader = `${totalCount} post${
     //   totalCount === 1 ? '' : 's'
@@ -58,9 +58,20 @@ class TagRoute extends React.Component {
         </Helmet>
           <div
             className="landing-image margin-top-0"
-            style={{
-              backgroundImage: `url('/img/latest-stories.jpg')`,
-            }} />
+            // style={{
+            //   backgroundImage: `url('/img/latest-stories.jpg')`,
+            // }}
+            >
+              <Img
+                fluid={!!landingImage.childImageSharp ?
+                  landingImage.childImageSharp.fluid :
+                  landingImage
+                } 
+                alt={'Ika Editions Page Cover'}
+                style={{
+                  position: 'static'
+                }} />
+          </div>
           <h3 className={'section-class'}>
             Editions
           </h3>
