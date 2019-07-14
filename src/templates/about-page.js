@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
+import Img from 'gatsby-image'
 
 export const AboutPageTemplate = ({ 
   title, 
@@ -17,13 +18,23 @@ export const AboutPageTemplate = ({
       <div
         className={'landing-image'}
         style={{
-          backgroundImage: `url(${
-            !!image.childImageSharp
-              ? image.childImageSharp.fluid.src
-              : image
-          })`,
-          backgroundPosition: `10%`
-        }} />
+          // backgroundImage: `url(${
+          //   !!image.childImageSharp
+          //     ? image.childImageSharp.fluid.src
+          //     : image
+          // })`,
+          // backgroundPosition: `10%`
+        }}
+        >
+          <Img 
+            fluid={!!image.childImageSharp ? 
+                      image.childImageSharp.fluid : 
+                      image}
+            style={{
+              position: 'static'
+            }}
+            alt={'Ika About Page Cover'} /> 
+      </div>
       <h4 className={'section-class'}>
         {title}
       </h4>

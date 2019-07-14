@@ -6,6 +6,7 @@ import Img from 'gatsby-image'
 
 class TagRoute extends React.Component {
   render() {
+    console.log('TagRoute ::: edges ::: ', this.props.data.allMarkdownRemark.edges)
     const posts = this.props.data.allMarkdownRemark.edges
     const postLinks = posts.map(post => (
       <div key={post.node.fields.slug}>
@@ -37,7 +38,7 @@ class TagRoute extends React.Component {
     const imageLinks = posts.map(post => (
       <meta 
         property={'og:image'} 
-        content={post.node.frontmatter.image.childImageSharp.fluid.src}
+        content={post.node.frontmatter.imageMeta.childImageSharp.fluid.src}
         key={post.node.fields.slug} />
     ))
 
@@ -99,7 +100,14 @@ export const tagPageQuery = graphql`
             title
             image {
               childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
+                fluid(maxWidth: 1050, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            imageMeta: image {
+              childImageSharp {
+                fluid(maxWidth: 250, quality: 65) {
                   ...GatsbyImageSharpFluid
                 }
               }

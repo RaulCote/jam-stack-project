@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 // import landingImage from '../img/18.jpg'
 
 import Layout from '../components/Layout'
@@ -17,13 +18,22 @@ export const IndexPageTemplate = ({
     <div>
       <div
         className={'landing-image'}
-        style={{
-          backgroundImage: `url(${
-            !!image.childImageSharp
-              ? image.childImageSharp.fluid.src
-              : image
-          })`
-        }}>
+        // style={{
+        //   backgroundImage: `url(${
+        //     !!image.childImageSharp
+        //       ? image.childImageSharp.fluid.src
+        //       : image
+        //   })`
+        // }}
+        >
+          <Img 
+            fluid={!!image.childImageSharp ? 
+                      image.childImageSharp.fluid : 
+                      image}
+            style={{
+              position: 'static'
+            }}
+            alt={'Ika About Page Cover'} /> 
         </div>
         <section className="blabla">
           <div className="container">
