@@ -1,3 +1,5 @@
+// TODO ::: add https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap/?=sitemap
+
 module.exports = {
   siteMetadata: {
     title: 'Ika Editions',
