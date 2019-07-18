@@ -15,7 +15,9 @@ export const ShopPageTemplate = ({
     pricing,
   }) => (
     <section className="section section--gradient">
-       
+      <h3 className={'section-class'}>
+        Coming Soon...
+      </h3>
     </section>
   )
   
