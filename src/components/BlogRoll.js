@@ -8,10 +8,12 @@ class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
+    const editionsPosts = posts && posts.filter(post => post.node.frontmatter.tags.includes('editions'))
     
+    /*  Previously it was using posts, not editionsPosts */
     return (
       <div className="columns is-multiline">
-      {posts && (posts
+      {posts && (editionsPosts
           .map(({ node: post }) => (
             <div
               className="is-parent column is-6"
@@ -87,6 +89,7 @@ export default () => (
                   }
                 }
               }
+              tags
               templateKey
               date(formatString: "MMMM DD, YYYY")
             }
