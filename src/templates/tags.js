@@ -44,6 +44,7 @@ class TagRoute extends React.Component {
     const tag = this.props.pageContext.tag
     const title = this.props.data.site.siteMetadata.title
     const landingImage = this.props.data.editionsQuery.frontmatter.image
+    const tagTitle = tag.charAt(0).toUpperCase() + tag.slice(1)
     // const totalCount = this.props.data.allMarkdownRemark.totalCount
     // const tagHeader = `${totalCount} post${
     //   totalCount === 1 ? '' : 's'
@@ -67,13 +68,13 @@ class TagRoute extends React.Component {
                   landingImage.childImageSharp.fluid :
                   landingImage
                 } 
-                alt={'Ika Editions Page Cover'}
+                alt={`Ika Editions Page ${tagTitle} Cover`}
                 style={{
                   position: 'static'
                 }} />
           </div>
           <h3 className={'section-class'}>
-            Editions
+            {tagTitle}
           </h3>
             {/* <h3 className="">{tagHeader}</h3> */}
           <article style={{
