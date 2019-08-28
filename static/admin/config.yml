@@ -60,7 +60,6 @@ collections:
         fields: 
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tags"}
           - {label: Image, name: image, widget: image}
-          - {label: Press-Image, name: press-image, widget: image}
       # - file: "src/pages/products/index.md"
       #   label: "Products Page"
       #   name: "products"

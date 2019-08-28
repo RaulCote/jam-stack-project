@@ -39,9 +39,9 @@ export const VideosPageTemplate = ({
       //   marginTop: '100px'
       // }}
       >
-      <h4 className={'section-class'}>
+      {/* <h4 className={'section-class'}>
         Videos
-      </h4>
+      </h4> */}
       {
         videos.map((video, key) => {
           return (
