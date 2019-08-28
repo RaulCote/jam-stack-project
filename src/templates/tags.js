@@ -57,7 +57,7 @@ class TagRoute extends React.Component {
           <meta property={'og:type'} content={'article'} />
           {imageLinks}
         </Helmet>
-          <div
+          {/* <div
             className="landing-image margin-top-0"
             // style={{
             //   backgroundImage: `url('/img/latest-stories.jpg')`,
@@ -72,10 +72,10 @@ class TagRoute extends React.Component {
                 style={{
                   position: 'static'
                 }} />
-          </div>
-          <h3 className={'section-class'}>
+          </div> */}
+          {/* <h3 className={'section-class'}>
             {tagTitle}
-          </h3>
+          </h3> */}
             {/* <h3 className="">{tagHeader}</h3> */}
           <article style={{
             marginTop: '20px'

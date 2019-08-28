@@ -35,9 +35,9 @@ export const AboutPageTemplate = ({
             }}
             alt={'Ika About Page Cover'} /> 
       </div>
-      <h4 className={'section-class'}>
+      {/* <h4 className={'section-class'}>
         {title}
-      </h4>
+      </h4> */}
       <PageContent className={'about-container'} content={content} />
       <div className={'google-maps-container'}>
         <iframe 

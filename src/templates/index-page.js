@@ -16,7 +16,7 @@ export const IndexPageTemplate = ({
   subheading
 }) => (
     <div>
-      <div
+      {/* <div
         className={'landing-image'}
         // style={{
         //   backgroundImage: `url(${
@@ -34,17 +34,17 @@ export const IndexPageTemplate = ({
               position: 'static'
             }}
             alt={'Ika About Page Cover'} /> 
-        </div>
-        <section className="blabla">
+        </div> */}
+        <section className="blabla" style={{ marginTop: '20px'}}>
           <div className="container">
             <div className="section">
               <div className="columns">
                 <div className="column is-10 is-offset-1">
                   <div className="content">
                     <div className="column is-12">
-                        <h3 className={'section-class'}>
+                        {/* <h3 className={'section-class'}>
                           Latest stories
-                        </h3>
+                        </h3> */}
                         <div className={'lastest-stories-container'}>
                           <BlogRoll />
                           <div className={'container-text container-button'}>
