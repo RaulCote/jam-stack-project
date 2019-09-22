@@ -88,7 +88,7 @@ const Navbar = class extends React.Component {
               </Link>
               <Link 
                 className={'navbar-item navbar-links'} 
-                to={'/tags/press'} 
+                to={'/blog/2019-08-26-press-1/'} 
                 onClick={() => this.closeNavBar()}
                 activeStyle={{ color: 'white' }}>
                 Press
