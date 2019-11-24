@@ -8,12 +8,22 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
 
   if (!!image && !!image.childImageSharp) {
     return (
-      <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt={alt} />
+      <Img 
+        style={imageStyle} 
+        fluid={image.childImageSharp.fluid} 
+        alt={alt} 
+      />
     )
   }
 
   if (!!childImageSharp) {
-    return <Img style={imageStyle} fluid={childImageSharp.fluid} alt={alt} />
+    return (
+      <Img 
+        style={imageStyle} 
+        fluid={childImageSharp.fluid} 
+        alt={alt}
+      />
+    )
   }
 
   if (!!image && typeof image === 'string')
@@ -26,7 +36,9 @@ PreviewCompatibleImage.propTypes = {
   imageInfo: PropTypes.shape({
     alt: PropTypes.string,
     childImageSharp: PropTypes.object,
-    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
+    image: PropTypes.oneOfType(
+      [PropTypes.object, PropTypes.string]
+    ).isRequired,
     style: PropTypes.object,
   }).isRequired,
 }

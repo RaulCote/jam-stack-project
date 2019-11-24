@@ -1,13 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
-// import landingImage from '../img/18.jpg'
-
-import Layout from '../components/Layout'
-
-// import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link, graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import BlogRoll from '../components/BlogRoll';
 
 export const IndexPageTemplate = ({
   image,
@@ -16,50 +11,28 @@ export const IndexPageTemplate = ({
   subheading
 }) => (
     <div>
-      {/* <div
-        className={'landing-image'}
-        // style={{
-        //   backgroundImage: `url(${
-        //     !!image.childImageSharp
-        //       ? image.childImageSharp.fluid.src
-        //       : image
-        //   })`
-        // }}
-        >
-          <Img 
-            fluid={!!image.childImageSharp ? 
-                      image.childImageSharp.fluid : 
-                      image}
-            style={{
-              position: 'static'
-            }}
-            alt={'Ika About Page Cover'} /> 
-        </div> */}
-        <section className="blabla" style={{ marginTop: '20px'}}>
-          <div className="container">
-            <div className="section">
-              <div className="columns">
-                <div className="column is-10 is-offset-1">
-                  <div className="content">
-                    <div className="column is-12">
-                        {/* <h3 className={'section-class'}>
-                          Latest stories
-                        </h3> */}
-                        <div className={'lastest-stories-container'}>
-                          <BlogRoll />
-                          <div className={'container-text container-button'}>
-                            <Link className="btn" to="/tags/editions">
-                              View More
-                            </Link>
-                          </div>
-                        </div>
+      <section style={{ marginTop: '20px'}}>
+        <div className="container">
+          <div className="section">
+            <div className="columns">
+              <div className="column is-10 is-offset-1">
+                <div className="content">
+                  <div className="column is-12">
+                    <div className={'lastest-stories-container'}>
+                      <BlogRoll />
+                      <div className={'container-text container-button'}>
+                        <Link className="btn" to="/tags/editions">
+                          View More
+                        </Link>
+                      </div>
                     </div>
-                    </div>
-                </div>
+                  </div>
+                  </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
   </div>
 )
 

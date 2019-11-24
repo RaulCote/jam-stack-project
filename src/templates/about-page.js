@@ -15,29 +15,17 @@ export const AboutPageTemplate = ({
   const PageContent = contentComponent || Content
   return (
     <section>
-      <div
-        className={'landing-image'}
-        style={{
-          // backgroundImage: `url(${
-          //   !!image.childImageSharp
-          //     ? image.childImageSharp.fluid.src
-          //     : image
-          // })`,
-          // backgroundPosition: `10%`
-        }}
-        >
-          <Img 
-            fluid={!!image.childImageSharp ? 
-                      image.childImageSharp.fluid : 
-                      image}
-            style={{
-              position: 'static'
-            }}
-            alt={'Ika About Page Cover'} /> 
+      <div className={'landing-image'}>
+        <Img 
+          fluid={!!image.childImageSharp 
+                  ? image.childImageSharp.fluid 
+                  : image}
+          style={{
+            position: 'static'
+          }}
+          alt={'Ika About Page Cover'} 
+        /> 
       </div>
-      {/* <h4 className={'section-class'}>
-        {title}
-      </h4> */}
       <PageContent className={'about-container'} content={content} />
       <div className={'google-maps-container'}>
         <iframe 

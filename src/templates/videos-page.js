@@ -33,36 +33,29 @@ export const VideosPageTemplate = ({
     fullImage,
     pricing,
   }) => (
-    <section 
-      className="section"
-      // style={{
-      //   marginTop: '100px'
-      // }}
-      >
-      {/* <h4 className={'section-class'}>
-        Videos
-      </h4> */}
+    <section className="section">
       {
         videos.map((video, key) => {
           return (
             <React.Fragment key={key}>
-              <h2 className={'video-title'}>{video.title}</h2>
+              <h2 className={'video-title'}>
+                {video.title}
+              </h2>
               <div
                 style={{
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center'
                 }}
-                className={'video-iframe-container'}>
+                className={'video-iframe-container'}
+              >
                 <iframe 
                   title={'videos-iframe'}
                   allowFullScreen={true} 
                   className={'video-iframe'}
-                  style={{
-                    border: 'none'
-                  }}
-                  src={video.url}>
-                </iframe>
+                  style={{ border: 'none' }}
+                  src={video.url} 
+                />
               </div> 
             </React.Fragment>
           )

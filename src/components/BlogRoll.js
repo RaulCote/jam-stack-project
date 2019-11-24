@@ -8,8 +8,9 @@ class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-    const editionsPosts = posts && posts.filter(post => post.node.frontmatter.tags.includes('editions'))
-    /*  Previously it was using posts, not editionsPosts */
+    const editionsPosts = posts && posts.filter(
+      post => post.node.frontmatter.tags.includes('editions')
+    )
     
     return (
       <div className="columns is-multiline">
@@ -19,36 +20,31 @@ class BlogRoll extends React.Component {
               className="is-parent column is-6"
               key={post.id}
             >
-              <article className="tile is-child box notification">
+              <article 
+                className="tile is-child box notification"
+              >
                 <div className={'container-card'}>
-                  <Link className={'roll-post-title'} to={post.fields.slug}>
+                  <Link 
+                    className={'roll-post-title'} 
+                    to={post.fields.slug}
+                  >
                     {post.frontmatter.title}
                   </Link>
                 </div>
                 { post.frontmatter.image ?  
                   <div className={'roll-post-image-container'}>
                     <Link 
-                    to={post.fields.slug}
-                    className={'roll-post-image'} >
+                      className={'roll-post-image'}
+                      to={post.fields.slug}
+                    >
                       <Img
-                        // className={'roll-post-image'} 
                         fluid={post.frontmatter.image.childImageSharp.fluid}
                         alt={`${post.frontmatter.title} cover`}
-                         />
-                      {/* <img
-                      className={'roll-post-image'} 
-                      alt={`${post.frontmatter.title} cover`}
-                      src={post.frontmatter.image.childImageSharp.fluid.src} 
-                      />   */}
+                      />
                     </Link>
                   </div>
                 : null
                 }
-                {/* <p className={'container-text'}>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                </p> */}
               </article>
             </div>
       )))}
