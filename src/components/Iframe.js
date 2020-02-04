@@ -1,7 +1,6 @@
 import React from 'react';
 
 class IframeComponent extends React.Component {
-  
   componentDidMount() {
     const script = document.createElement('script');
     script.type = 'text/javascript';
@@ -14,19 +13,18 @@ class IframeComponent extends React.Component {
     return (
       <iframe
         title={'snapwidget-iframe'}
-        allowtransparency={'true'} 
-        className={'snapwidget-ika snapwidget-widget'} 
-        frameBorder={'0'} 
-        scrolling={'no'} 
-        src={'https://snapwidget.com/embed/293837'} 
+        allowtransparency={'true'}
+        className={'snapwidget-ika snapwidget-widget'}
+        frameBorder={'0'}
+        scrolling={'no'}
+        src={'https://snapwidget.com/embed/293837'}
         style={{
-          border: 'none', 
-          overflow: 'auto', 
-          height: '100%'
+          border: 'none',
+          overflow: 'auto',
+          height: '100%',
         }}
-        >
-      </iframe>
-    )
+      ></iframe>
+    );
   }
 }
 

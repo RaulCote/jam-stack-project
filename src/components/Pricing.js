@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+// TODO: check config.yml, ShopPagePreview etc before deleting 
+
 const Pricing = ({ data }) => (
   <div className="columns">
     {data.map(price => (

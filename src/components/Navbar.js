@@ -1,10 +1,9 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import logo from '../img/ika-logo.png'
+import React from 'react';
+import { Link } from 'gatsby';
+import logo from '../img/ika-logo.png';
 
 const Navbar = class extends React.Component {
-  
-  toggleNavBar = (e) => {
+  toggleNavBar = e => {
     e.preventDefault();
 
     const navMenu = document.getElementById('navMenu');
@@ -37,76 +36,82 @@ const Navbar = class extends React.Component {
       <nav
         className={'navbar'}
         role={'navigation'}
-        aria-label={'main-navigation'}>
-
+        aria-label={'main-navigation'}
+      >
         <div className={'navbar-container'}>
-
           <div id={'navMenu'} className={'navbar-menu'}>
             <div className={'navbar-start'}>
-              <Link 
+              <Link
                 to={'/'}
                 id={'logoLink'}
-                className={'logo-navbar-container'} 
-                title={'Logo'} 
-                onClick={() => this.closeNavBar()}>
+                className={'logo-navbar-container'}
+                title={'Logo'}
+                onClick={() => this.closeNavBar()}
+              >
                 <img src={logo} alt={'Ika'} className={'logo-navbar'} />
               </Link>
-              <Link 
+              <Link
                 className={'navbar-item navbar-links'}
-                to={'/about'} 
+                to={'/about'}
                 onClick={() => this.closeNavBar()}
-                activeStyle={{ color: 'white' }}>
-                 About
+                activeStyle={{ color: 'white' }}
+              >
+                About
               </Link>
-              <Link 
-                className={'navbar-item navbar-links'} 
-                to={'/tags/editions'} 
+              <Link
+                className={'navbar-item navbar-links'}
+                to={'/tags/editions'}
                 onClick={() => this.closeNavBar()}
-                activeStyle={{ color: 'white' }}>
+                activeStyle={{ color: 'white' }}
+              >
                 Editions
               </Link>
               <Link
                 className={'navbar-item navbar-links'}
                 to={'/videos'}
                 onClick={() => this.closeNavBar()}
-                activeStyle={{ color: 'white' }}>
+                activeStyle={{ color: 'white' }}
+              >
                 Videos
               </Link>
-              <Link 
-                className={'navbar-item navbar-links'} 
-                to={'/news'} 
+              <Link
+                className={'navbar-item navbar-links'}
+                to={'/news'}
                 onClick={() => this.closeNavBar()}
-                activeStyle={{ color: 'white' }}>
+                activeStyle={{ color: 'white' }}
+              >
                 News
               </Link>
-              <Link 
-                className={'navbar-item navbar-links'} 
-                to={'/shop'} 
+              <Link
+                className={'navbar-item navbar-links'}
+                to={'/shop'}
                 onClick={() => this.closeNavBar()}
-                activeStyle={{ color: 'white' }}>
+                activeStyle={{ color: 'white' }}
+              >
                 Shop
               </Link>
-              <Link 
-                className={'navbar-item navbar-links'} 
-                to={'/blog/2019-08-26-press-1/'} 
+              <Link
+                className={'navbar-item navbar-links'}
+                to={'/blog/2019-08-26-press-1/'}
                 onClick={() => this.closeNavBar()}
-                activeStyle={{ color: 'white' }}>
+                activeStyle={{ color: 'white' }}
+              >
                 Press
               </Link>
-              <a 
+              <a
                 href={'true'}
                 className={'icon navbar-item burguer'}
-                onClick={(e) => this.toggleNavBar(e)}>
+                onClick={e => this.toggleNavBar(e)}
+              >
                 <div className={'burguer-bar'} />
                 <div className={'burguer-bar'} />
               </a>
             </div>
           </div>
-          
         </div>
       </nav>
-    )
-  };
+    );
+  }
 };
 
 export default Navbar;

@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { v4 } from 'uuid'
 
+// TODO: Testimonials is to delete, check config.yml previously
+
 const Testimonials = ({ testimonials }) => (
   <div>
     {testimonials.map(testimonial => (

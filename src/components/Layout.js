@@ -49,38 +49,19 @@ const TemplateWrapper = ({ children }) => (
             sizes={'16x16'}
           />
 
-          <link
-            rel={'mask-icon'}
-            href={ikaSafariPinnedTab}
-            color={'#ff4400'}
-          />
-          <meta 
-            name={'theme-color'} 
-            content={'#fff'}
-          />
-          <meta 
-            property={'og:type'} 
-            content={'business.business'} 
-          />
-          <meta 
-            property={'og:title'} 
-            content={data.site.siteMetadata.title} 
-          />
-          <meta 
-            property={'og:url'} 
-            content={'/'} 
-          />
-          <meta 
-            property={'og:image'} 
-            content={ikaImageOg} 
-          />
+          <link rel={'mask-icon'} href={ikaSafariPinnedTab} color={'#ff4400'} />
+          <meta name={'theme-color'} content={'#fff'} />
+          <meta property={'og:type'} content={'business.business'} />
+          <meta property={'og:title'} content={data.site.siteMetadata.title} />
+          <meta property={'og:url'} content={'/'} />
+          <meta property={'og:image'} content={ikaImageOg} />
         </Helmet>
         <Navbar />
-          <div className={'footer-margin'}>{children}</div>
+        <div className={'footer-margin'}>{children}</div>
         <Footer />
       </div>
     )}
   />
-)
+);
 
-export default TemplateWrapper
+export default TemplateWrapper;

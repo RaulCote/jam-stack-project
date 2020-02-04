@@ -1,54 +1,39 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link, graphql, StaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 
 class BlogRoll extends React.Component {
-
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
-    const editionsPosts = posts && posts.filter(
-      post => post.node.frontmatter.tags.includes('editions')
-    )
-    
+    const { data } = this.props;
+    const { edges: posts } = data.allMarkdownRemark;
+    const editionsPosts =
+      posts &&
+      posts.filter(post => post.node.frontmatter.tags.includes('editions'));
+
     return (
-      <div className="columns is-multiline">
-      {posts && (editionsPosts
-          .map(({ node: post }) => (
-            <div
-              className="is-parent column is-6"
-              key={post.id}
-            >
-              <article 
-                className="tile is-child box notification"
-              >
-                <div className={'container-card'}>
-                  <Link 
-                    className={'roll-post-title'} 
-                    to={post.fields.slug}
-                  >
-                    {post.frontmatter.title}
+      <React.Fragment>
+        {posts &&
+          editionsPosts.map(({ node: post }) => (
+            <article key={post.id}>
+              <div className={'container-card'}>
+                <Link className={'roll-post-title'} to={post.fields.slug}>
+                  {post.frontmatter.title}
+                </Link>
+              </div>
+              {post.frontmatter.image ? (
+                <div className={'roll-post-image-container'}>
+                  <Link className={'roll-post-image'} to={post.fields.slug}>
+                    <Img
+                      fluid={post.frontmatter.image.childImageSharp.fluid}
+                      alt={`${post.frontmatter.title} cover`}
+                    />
                   </Link>
                 </div>
-                { post.frontmatter.image ?  
-                  <div className={'roll-post-image-container'}>
-                    <Link 
-                      className={'roll-post-image'}
-                      to={post.fields.slug}
-                    >
-                      <Img
-                        fluid={post.frontmatter.image.childImageSharp.fluid}
-                        alt={`${post.frontmatter.title} cover`}
-                      />
-                    </Link>
-                  </div>
-                : null
-                }
-              </article>
-            </div>
-      )))}
-      </div>
+              ) : null}
+            </article>
+          ))}
+      </React.Fragment>
     );
   }
 }
@@ -59,43 +44,41 @@ BlogRoll.propTypes = {
       edges: PropTypes.array,
     }),
   }),
-}
+};
 
 export default () => (
   <StaticQuery
     query={graphql`
-    query BlogRollQuery {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] },
-        filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
-      ) {
-        edges {
-          node {
-            excerpt(pruneLength: 400)
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 2048, quality: 100) {
-                    ...GatsbyImageSharpFluid
+      query BlogRollQuery {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+        ) {
+          edges {
+            node {
+              excerpt(pruneLength: 400)
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 2048, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
                   }
                 }
+                tags
+                templateKey
+                date(formatString: "MMMM DD, YYYY")
               }
-              tags
-              templateKey
-              date(formatString: "MMMM DD, YYYY")
             }
           }
         }
       }
-    }
     `}
-    render={(data, count) => (
-      <BlogRoll data={data} count={count} />
-    )}
+    render={(data, count) => <BlogRoll data={data} count={count} />}
   />
-)
+);
