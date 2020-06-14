@@ -1,208 +1,59 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import React from 'react';
+import Layout from '../components/Layout';
 
 export const videos = [
   {
     title: 'E13',
-    url: 'https://www.youtube.com/embed/SGEUrmu38xE'
+    url: 'https://www.youtube.com/embed/SGEUrmu38xE',
   },
   {
     title: 'E10',
-    url: 'https://www.youtube.com/embed/G8_rxc_autk'
+    url: 'https://www.youtube.com/embed/G8_rxc_autk',
   },
   {
     title: 'E4',
-    url: 'https://www.youtube.com/embed/PuAlQ3P44TU'
+    url: 'https://www.youtube.com/embed/PuAlQ3P44TU',
   },
   {
     title: 'E3',
-    url: 'https://www.youtube.com/embed/3uboaOCo1WA'
-  }
-]
+    url: 'https://www.youtube.com/embed/3uboaOCo1WA',
+  },
+];
 
-export const VideosPageTemplate = ({
-    image,
-    title,
-    heading,
-    description,
-    intro,
-    main,
-    testimonials,
-    fullImage,
-    pricing,
-  }) => (
-    <section className="section">
-      {
-        videos.map((video, key) => {
-          return (
-            <React.Fragment key={key}>
-              <h2 className={'video-title'}>
-                {video.title}
-              </h2>
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center'
-                }}
-                className={'video-iframe-container'}
-              >
-                <iframe 
-                  title={'videos-iframe'}
-                  allowFullScreen={true} 
-                  className={'video-iframe'}
-                  style={{ border: 'none' }}
-                  src={video.url} 
-                />
-              </div> 
-            </React.Fragment>
-          )
-        })
-      }
-    </section>
-  )
+export const VideosPageTemplate = () => (
+  <section className="section">
+    {videos.map((video, key) => {
+      return (
+        <React.Fragment key={key}>
+          <h2 className={'video-title'}>{video.title}</h2>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+            className={'video-iframe-container'}
+          >
+            <iframe
+              title={'videos-iframe'}
+              allowFullScreen={true}
+              className={'video-iframe'}
+              style={{ border: 'none' }}
+              src={video.url}
+            />
+          </div>
+        </React.Fragment>
+      );
+    })}
+  </section>
+);
 
+const VideosPage = () => {
+  return (
+    <Layout>
+      <VideosPageTemplate />
+    </Layout>
+  );
+};
 
-  VideosPageTemplate.propTypes = {
-    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    title: PropTypes.string,
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    intro: PropTypes.shape({
-      blurbs: PropTypes.array,
-    }),
-    main: PropTypes.shape({
-      heading: PropTypes.string,
-      description: PropTypes.string,
-      image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-      image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-      image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    }),
-    testimonials: PropTypes.array,
-    fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    pricing: PropTypes.shape({
-      heading: PropTypes.string,
-      description: PropTypes.string,
-      plans: PropTypes.array,
-    }),
-  }
-  
-  const VideosPage = ({ data }) => {
-    const { frontmatter } = data.markdownRemark
-  
-    return (
-      <Layout>
-        <VideosPageTemplate
-          image={frontmatter.image}
-          title={frontmatter.title}
-          heading={frontmatter.heading}
-          description={frontmatter.description}
-          intro={frontmatter.intro}
-          main={frontmatter.main}
-          testimonials={frontmatter.testimonials}
-          fullImage={frontmatter.full_image}
-          pricing={frontmatter.pricing}
-        />
-      </Layout>
-    )
-  }
-  
-  VideosPage.propTypes = {
-    data: PropTypes.shape({
-      markdownRemark: PropTypes.shape({
-        frontmatter: PropTypes.object,
-      }),
-    }),
-  }
-  
-  export default VideosPage
-  
-  export const VideosPageQuery = graphql`
-    query VideosPage($id: String!) {
-      markdownRemark(id: { eq: $id }) {
-        frontmatter {
-          title
-          image {
-            childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          heading
-          description
-          intro {
-            blurbs {
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 240, quality: 64) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-              text
-            }
-            heading
-            description
-          }
-          main {
-            heading
-            description
-            image1 {
-              alt
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 526, quality: 92) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-            image2 {
-              alt
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 526, quality: 92) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-            image3 {
-              alt
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 1075, quality: 72) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-          }
-          testimonials {
-            author
-            quote
-          }
-          full_image {
-            childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          pricing {
-            heading
-            description
-            plans {
-              description
-              items
-              plan
-              price
-            }
-          }
-        }
-      }
-    }
-  `
+export default VideosPage;

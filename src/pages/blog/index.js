@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-import Layout from '../../components/Layout'
-import BlogRoll from '../../components/BlogRoll'
+import Layout from '../../components/Layout';
+import BlogRoll from '../../components/BlogRoll';
 
 export default class BlogIndexPage extends React.Component {
   render() {
-    
-  return (
+    return (
       <Layout>
         <section className="section">
           <div className="container">
@@ -15,15 +14,18 @@ export default class BlogIndexPage extends React.Component {
                 className="full-width-image-container margin-top-0"
                 style={{
                   backgroundImage: `url('/img/latest-stories.jpg')`,
-                }}>
+                }}
+              >
                 <h1
                   className="has-text-weight-bold is-size-1"
                   style={{
-                    boxShadow: '0.5rem 0 0 rgba(17, 17, 17, 1), -0.5rem 0 0 rgba(17, 17, 17, 1)',
+                    boxShadow:
+                      '0.5rem 0 0 rgba(17, 17, 17, 1), -0.5rem 0 0 rgba(17, 17, 17, 1)',
                     backgroundColor: 'rgba(17, 17, 17, 1)',
                     color: 'white',
                     padding: '1rem',
-                  }}>
+                  }}
+                >
                   Latest Stories
                 </h1>
               </div>
@@ -32,6 +34,6 @@ export default class BlogIndexPage extends React.Component {
           </div>
         </section>
       </Layout>
-    )
+    );
   }
 }

@@ -14,23 +14,19 @@ export const BlogPostTemplate = ({
   title,
   helmet,
 }) => {
-  const PostContent = contentComponent || Content
+  const PostContent = contentComponent || Content;
 
   return (
     <section className="section">
       {helmet || ''}
       <div className={'post-container'}>
-        <h1 className={'post-title'}>
-          {title}
-        </h1>
-        <p className={'post-description'}>
-          {description}
-        </p>
+        <h1 className={'post-title'}>{title}</h1>
+        <p className={'post-description'}>{description}</p>
         <PostContent content={content} />
       </div>
     </section>
-  )
-}
+  );
+};
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
@@ -38,10 +34,10 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
-}
+};
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
 
   return (
     <Layout>
@@ -50,16 +46,15 @@ const BlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
-          <Helmet 
-            titleTemplate={'%s | Ika Editions'}>
+          <Helmet titleTemplate={'%s | Ika Editions'}>
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name={'description'}
               content={`${post.frontmatter.description}`}
             />
-            <meta 
-              property={'og:image'} 
-              content={post.frontmatter.image.childImageSharp.fluid.src} 
+            <meta
+              property={'og:image'}
+              content={post.frontmatter.image.childImageSharp.fluid.src}
             />
             <meta property={'og:type'} content={'article'} />
           </Helmet>
@@ -68,16 +63,16 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
       />
     </Layout>
-  )
-}
+  );
+};
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
-}
+};
 
-export default BlogPost
+export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -99,4 +94,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

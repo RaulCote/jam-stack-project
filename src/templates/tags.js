@@ -6,60 +6,51 @@ import Img from 'gatsby-image';
 
 class TagRoute extends React.Component {
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges
+    const posts = this.props.data.allMarkdownRemark.edges;
     const postLinks = posts.map(post => (
       <div key={post.node.fields.slug}>
         <div className={'container-card'}>
-          <Link 
-            className={'roll-post-title'}
-            to={post.node.fields.slug}
-          >
+          <Link className={'roll-post-title'} to={post.node.fields.slug}>
             {post.node.frontmatter.title}
           </Link>
         </div>
-        { post.node.frontmatter.image ?
+        {post.node.frontmatter.image ? (
           <div className={'roll-post-image-container'}>
-            <Link
-              to={post.node.fields.slug}
-              className={'roll-post-image'}
-            >
-              <Img 
+            <Link to={post.node.fields.slug} className={'roll-post-image'}>
+              <Img
                 fluid={post.node.frontmatter.image.childImageSharp.fluid}
-                alt={`${post.node.frontmatter.title} cover`} 
+                alt={`${post.node.frontmatter.title} cover`}
               />
-            </Link> 
+            </Link>
           </div>
-        : null }
+        ) : null}
       </div>
-    ))
+    ));
 
     const imageLinksMetaInfo = posts.map(post => (
-      <meta 
-        property={'og:image'} 
+      <meta
+        property={'og:image'}
         content={post.node.frontmatter.imageMeta.childImageSharp.fluid.src}
-        key={post.node.fields.slug} 
+        key={post.node.fields.slug}
       />
-    ))
+    ));
 
-    const tag = this.props.pageContext.tag
-    const title = this.props.data.site.siteMetadata.title
+    const tag = this.props.pageContext.tag;
+    const title = this.props.data.site.siteMetadata.title;
 
     return (
       <Layout>
-        <Helmet 
-          title={`${title} | ${tag}`}>
+        <Helmet title={`${title} | ${tag}`}>
           <meta property={'og:type'} content={'article'} />
           {imageLinksMetaInfo}
         </Helmet>
-        <article style={{marginTop: '20px'}}>
-          {postLinks}
-        </article>
+        <article style={{ marginTop: '20px' }}>{postLinks}</article>
       </Layout>
-    )
+    );
   }
 }
 
-export default TagRoute
+export default TagRoute;
 
 export const tagPageQuery = graphql`
   query TagPage($tag: String) {
@@ -94,12 +85,14 @@ export const tagPageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
-            }  
+            }
           }
         }
       }
     }
-    editionsQuery: markdownRemark(frontmatter: {templateKey: {eq: "tags"}}) {
+    editionsQuery: markdownRemark(
+      frontmatter: { templateKey: { eq: "tags" } }
+    ) {
       frontmatter {
         image {
           childImageSharp {
@@ -111,4 +104,4 @@ export const tagPageQuery = graphql`
       }
     }
   }
-`
+`;
