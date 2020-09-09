@@ -82,14 +82,13 @@ const Navbar = class extends React.Component {
               >
                 News
               </Link>
-              <Link
+              <a
                 className={'navbar-item navbar-links'}
-                to={'/shop'}
+                href={'https://ika-editions.myshopify.com'}
                 onClick={() => this.closeNavBar()}
-                activeStyle={{ color: 'white' }}
               >
                 Shop
-              </Link>
+              </a>
               <Link
                 className={'navbar-item navbar-links'}
                 to={'/blog/2019-08-26-press-1/'}
